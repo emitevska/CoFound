@@ -1,0 +1,3 @@
+project_id,title,description,required_skills,category
+P001,FitTrack,Mobile app for tracking workouts and fitness goals,"React Native, UI/UX, Firebase",Health & Fitness
+P002,SmartStudy,AI application that helps students organize study materials,"Python, Machine Learning, Flask",Education & AI

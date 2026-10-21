@@ -1,0 +1,6 @@
+user_id,name,skills,interests,experience,availability
+U001,Elena,"UI/UX, Figma","Design, Mobile Apps",Intermediate,10
+U002,Marko,"JavaScript, React Native, Firebase","Mobile Apps, Health Tech",Advanced,12
+U003,Ana,"Python, Machine Learning, Flask","AI, Web Development",Intermediate,8
+U004,Stefan,"Java, SQL, Spring Boot","Databases, Backend",Advanced,5
+U005,Marija,"CSS, JavaScript","Web Design, Frontend",Beginner,10
