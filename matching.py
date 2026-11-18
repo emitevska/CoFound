@@ -1,5 +1,6 @@
 
 import pandas as pd
+from pathlib import Path
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
@@ -8,8 +9,10 @@ from sklearn.metrics.pairwise import cosine_similarity
 # 1. LOAD THE DATASETS
 # ==========================================
 
-users = pd.read_csv("data/user_profiles.csv")
-projects = pd.read_csv("data/projects.csv")
+BASE_DIR = Path(__file__).resolve().parent
+
+users = pd.read_csv(BASE_DIR / "data" / "user_profiles.csv")
+projects = pd.read_csv(BASE_DIR / "data" / "projects.csv")
 
 print("=== CoFound AI Collaborator Matching ===")
 
@@ -23,7 +26,8 @@ print("Total projects:", len(projects))
 # ==========================================
 
 def split_items(value):
-    """Convert comma-separated values into a set."""
+    """Convert comma-separated text into a set of lowercase values."""
+
     if pd.isna(value):
         return set()
 
@@ -34,8 +38,24 @@ def split_items(value):
     }
 
 
+def normalize_text(value):
+    """Normalize text for simple category and role comparisons."""
+
+    if pd.isna(value):
+        return ""
+
+    return str(value).strip().lower()
+
+
+# ==========================================
+# 3. SKILL MATCHING
+# ==========================================
+
 def calculate_skill_match(user_skills, required_skills):
-    """Calculate the proportion of required skills a user has."""
+    """
+    Calculate the percentage of required skills
+    that a candidate possesses.
+    """
 
     user_set = split_items(user_skills)
     required_set = split_items(required_skills)
@@ -43,61 +63,174 @@ def calculate_skill_match(user_skills, required_skills):
     if not required_set:
         return 0.0
 
-    matching = user_set.intersection(required_set)
+    matching_skills = user_set.intersection(required_set)
 
-    return len(matching) / len(required_set)
+    return len(matching_skills) / len(required_set)
 
 
-def calculate_interest_match(user_interests, project_category):
-    """Calculate simple keyword overlap between interests and category."""
+# ==========================================
+# 4. INTEREST MATCHING
+# ==========================================
+
+def calculate_interest_match(
+    user_interests,
+    preferred_project_types,
+    project_category
+):
+    """
+    Compare the project category with the user's
+    interests and preferred project types.
+
+    This is an exact category matching method.
+    """
 
     interests = split_items(user_interests)
+    preferred_types = split_items(preferred_project_types)
     categories = split_items(project_category)
 
     if not categories:
         return 0.0
 
-    matching = interests.intersection(categories)
+    combined_preferences = interests.union(preferred_types)
 
-    return len(matching) / len(categories)
+    matching_categories = combined_preferences.intersection(categories)
+
+    return len(matching_categories) / len(categories)
 
 
-def calculate_availability_match(hours_available):
+# ==========================================
+# 5. AVAILABILITY MATCHING
+# ==========================================
+
+def calculate_availability_match(hours_available, hours_required):
     """
-    Prototype assumption:
-    10 or more hours per week gives full availability score.
+    Compare user availability with the project's
+    required weekly commitment.
+
+    Full score = enough available hours.
+    Partial score = insufficient available hours.
     """
 
     try:
-        hours = float(hours_available)
-        return max(0.0, min(hours / 10.0, 1.0))
+        available = float(hours_available)
+        required = float(hours_required)
+
+        if required <= 0:
+            return 0.0
+
+        return max(0.0, min(available / required, 1.0))
+
     except (ValueError, TypeError):
         return 0.0
 
 
 # ==========================================
-# 3. SELECT A PROJECT
+# 6. ROLE MATCHING
 # ==========================================
 
-def recommend_collaborators(project_id, top_n=3):
+def calculate_role_match(preferred_role, required_role):
+    """
+    Return 1 if the candidate's preferred role
+    matches the project's required role.
+    """
+
+    user_role = normalize_text(preferred_role)
+    project_role = normalize_text(required_role)
+
+    if not user_role or not project_role:
+        return 0.0
+
+    return 1.0 if user_role == project_role else 0.0
+
+
+# ==========================================
+# 7. EXPERIENCE MATCHING
+# ==========================================
+
+def calculate_experience_match(user_experience, required_experience):
+    """
+    Check whether the candidate meets the
+    project's minimum experience requirement.
+    """
+
+    levels = {
+        "beginner": 1,
+        "intermediate": 2,
+        "advanced": 3
+    }
+
+    user_level = levels.get(normalize_text(user_experience), 0)
+    required_level = levels.get(normalize_text(required_experience), 0)
+
+    if user_level == 0 or required_level == 0:
+        return 0.0
+
+    return 1.0 if user_level >= required_level else 0.0
+
+
+# ==========================================
+# 8. COLLABORATION MODE MATCHING
+# ==========================================
+
+def calculate_collaboration_match(user_mode, project_mode):
+    """
+    Compare preferred collaboration modes.
+
+    Exact match = 1.0
+    Hybrid/On-site combination = 0.5
+    Otherwise = 0.0
+
+    These are prototype assumptions.
+    """
+
+    user_mode = normalize_text(user_mode)
+    project_mode = normalize_text(project_mode)
+
+    if not user_mode or not project_mode:
+        return 0.0
+
+    if user_mode == project_mode:
+        return 1.0
+
+    if {user_mode, project_mode} == {"hybrid", "on-site"}:
+        return 0.5
+
+    return 0.0
+
+
+# ==========================================
+# 9. RECOMMEND COLLABORATORS
+# ==========================================
+
+def recommend_collaborators(project_id, top_n=3, verbose=True):
+    """
+    Recommend the top candidates for a project
+    using content-based matching and weighted ranking.
+    """
 
     selected = projects[projects["project_id"] == project_id]
 
     if selected.empty:
-        print("Project not found.")
+        if verbose:
+            print("Project not found:", project_id)
         return pd.DataFrame()
 
     project = selected.iloc[0]
 
-    print("\n===================================")
-    print("Project:", project["title"])
-    print("Description:", project["description"])
-    print("Required Skills:", project["required_skills"])
-    print("Category:", project["category"])
-    print("===================================")
+    if verbose:
+        print("\n===================================")
+        print("Project:", project["title"])
+        print("Description:", project["description"])
+        print("Required Skills:", project["required_skills"])
+        print("Required Role:", project["required_role"])
+        print("Required Experience:", project["required_experience"])
+        print("Hours per Week:", project["hours_per_week"])
+        print("Collaboration Mode:", project["collaboration_mode"])
+        print("Category:", project["category"])
+        print("===================================")
 
     # ======================================
-    # 4. PREPARE TEXT FOR TF-IDF
+    # 10. PREPARE TEXT FOR TF-IDF
     # ======================================
 
     project_text = (
@@ -108,23 +241,22 @@ def recommend_collaborators(project_id, top_n=3):
 
     user_texts = (
         users["skills"].fillna("").astype(str) + " " +
-        users["interests"].fillna("").astype(str)
+        users["interests"].fillna("").astype(str) + " " +
+        users["preferred_project_types"].fillna("").astype(str)
     ).tolist()
 
     all_texts = [project_text] + user_texts
 
     # ======================================
-    # 5. TF-IDF VECTORIZATION
+    # 11. TF-IDF VECTORIZATION
     # ======================================
 
-    vectorizer = TfidfVectorizer(
-        stop_words="english"
-    )
+    vectorizer = TfidfVectorizer(stop_words="english")
 
     tfidf_matrix = vectorizer.fit_transform(all_texts)
 
     # ======================================
-    # 6. COSINE SIMILARITY
+    # 12. COSINE SIMILARITY
     # ======================================
 
     similarity_scores = cosine_similarity(
@@ -133,7 +265,7 @@ def recommend_collaborators(project_id, top_n=3):
     ).flatten()
 
     # ======================================
-    # 7. CALCULATE MATCHING SCORES
+    # 13. CALCULATE MATCHING SCORES
     # ======================================
 
     results = users.copy()
@@ -147,102 +279,180 @@ def recommend_collaborators(project_id, top_n=3):
         )
     )
 
-    results["interest_match"] = results["interests"].apply(
-        lambda interests: calculate_interest_match(
-            interests,
+    results["interest_match"] = results.apply(
+        lambda user: calculate_interest_match(
+            user["interests"],
+            user["preferred_project_types"],
             project["category"]
-        )
+        ),
+        axis=1
     )
 
     results["availability_match"] = results["availability"].apply(
-        calculate_availability_match
+        lambda hours: calculate_availability_match(
+            hours,
+            project["hours_per_week"]
+        )
+    )
+
+    results["role_match"] = results["preferred_role"].apply(
+        lambda role: calculate_role_match(
+            role,
+            project["required_role"]
+        )
+    )
+
+    results["experience_match"] = results["experience"].apply(
+        lambda experience: calculate_experience_match(
+            experience,
+            project["required_experience"]
+        )
+    )
+
+    results["collaboration_match"] = results["collaboration_mode"].apply(
+        lambda mode: calculate_collaboration_match(
+            mode,
+            project["collaboration_mode"]
+        )
     )
 
     # ======================================
-    # 8. WEIGHTED MATCHING FORMULA
+    # 14. WEIGHTED MATCHING FORMULA
     # ======================================
 
-    # 50% text similarity
-    # 30% skill matching
+    # Prototype weights:
+    # 30% text similarity
+    # 25% skill matching
     # 10% interest matching
     # 10% availability
+    # 10% role matching
+    # 10% experience matching
+    #  5% collaboration compatibility
+    #
+    # Total = 100%
+    #
+    # These weights are design assumptions.
+    # They must be evaluated against a baseline.
 
     results["final_score"] = (
-        0.50 * results["text_similarity"] +
-        0.30 * results["skill_match"] +
+        0.30 * results["text_similarity"] +
+        0.25 * results["skill_match"] +
         0.10 * results["interest_match"] +
-        0.10 * results["availability_match"]
+        0.10 * results["availability_match"] +
+        0.10 * results["role_match"] +
+        0.10 * results["experience_match"] +
+        0.05 * results["collaboration_match"]
     )
 
-    # Convert final score to a 0-100 scale
+    # Convert the weighted score to a 0-100 scale.
+    # This is not a probability of success.
+
     results["match_score"] = (
         results["final_score"] * 100
     ).round(2)
 
     # ======================================
-    # 9. RANK COLLABORATORS
+    # 15. FILTER AND RANK CANDIDATES
     # ======================================
 
-    # Only recommend users with some text
-    # similarity or matching required skills.
+    # Exclude candidates who have neither matching
+    # required skills nor positive text similarity.
 
     results = results[
-        (results["text_similarity"] > 0) |
-        (results["skill_match"] > 0)
-    ]
+        (results["skill_match"] > 0) |
+        (results["text_similarity"] > 0)
+    ].copy()
+
+    # Sort by final score.
+    # User ID provides deterministic tie-breaking.
 
     results = results.sort_values(
-        by="final_score",
-        ascending=False
+        by=["final_score", "user_id"],
+        ascending=[False, True]
     )
 
-    top_results = results.head(top_n)
+    top_results = results.head(top_n).copy()
 
     # ======================================
-    # 10. DISPLAY RECOMMENDATIONS
+    # 16. DISPLAY RECOMMENDATIONS
     # ======================================
 
-    print("\n=== Top Collaborator Recommendations ===")
+    if verbose:
+        print("\n=== Top Collaborator Recommendations ===")
 
-    if top_results.empty:
-        print("No suitable collaborators found.")
-    else:
-        for rank, (_, user) in enumerate(
-            top_results.iterrows(), start=1
-        ):
-            print(f"\n{rank}. {user['name']}")
-            print("   Skills:", user["skills"])
-            print("   Interests:", user["interests"])
-            print("   Experience:", user["experience"])
-            print(
-                "   Availability:",
-                user["availability"],
-                "hours/week"
-            )
-            print(
-                "   Text Similarity:",
-                round(user["text_similarity"], 4)
-            )
-            print(
-                "   Skill Match:",
-                round(user["skill_match"] * 100, 2),
-                "%"
-            )
-            print(
-                "   Final Match Score:",
-                user["match_score"],
-                "/ 100"
-            )
+        if top_results.empty:
+            print("No suitable collaborators found.")
+
+        else:
+            for rank, (_, user) in enumerate(
+                top_results.iterrows(),
+                start=1
+            ):
+                print(f"\n{rank}. {user['name']}")
+                print("   User ID:", user["user_id"])
+                print("   Skills:", user["skills"])
+                print("   Preferred Role:", user["preferred_role"])
+                print("   Experience:", user["experience"])
+                print(
+                    "   Availability:",
+                    user["availability"],
+                    "hours/week"
+                )
+                print(
+                    "   Text Similarity:",
+                    round(user["text_similarity"], 4)
+                )
+                print(
+                    "   Skill Match:",
+                    round(user["skill_match"] * 100, 2),
+                    "%"
+                )
+                print(
+                    "   Interest Match:",
+                    round(user["interest_match"] * 100, 2),
+                    "%"
+                )
+                print(
+                    "   Availability Match:",
+                    round(user["availability_match"] * 100, 2),
+                    "%"
+                )
+                print(
+                    "   Role Match:",
+                    round(user["role_match"] * 100, 2),
+                    "%"
+                )
+                print(
+                    "   Experience Match:",
+                    round(user["experience_match"] * 100, 2),
+                    "%"
+                )
+                print(
+                    "   Collaboration Match:",
+                    round(user["collaboration_match"] * 100, 2),
+                    "%"
+                )
+                print(
+                    "   Final Match Score:",
+                    user["match_score"],
+                    "/ 100"
+                )
 
     return top_results
 
 
 # ==========================================
-# 11. RUN THE RECOMMENDATION SYSTEM
+# 17. RUN RECOMMENDATIONS FOR ALL PROJECTS
 # ==========================================
 
-print("\n\n########## FITTRACK ##########")
-recommend_collaborators("P001")
+if __name__ == "__main__":
 
-print("\n\n########## SMARTSTUDY ##########")
-recommend_collaborators("P002")
+    for _, project in projects.iterrows():
+
+        print(
+            f"\n\n########## "
+            f"{project['title'].upper()} "
+            f"##########"
+        )
+
+        recommend_collaborators(project["project_id"])

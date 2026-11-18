@@ -1,3 +1,11 @@
-project_id,title,description,required_skills,category
-P001,FitTrack,Mobile app for tracking workouts and fitness goals,"React Native, UI/UX, Firebase",Health & Fitness
-P002,SmartStudy,AI application that helps students organize study materials,"Python, Machine Learning, Flask",Education & AI
+project_id,title,description,required_skills,category,required_role,required_experience,hours_per_week,collaboration_mode,location
+P001,FitTrack,Mobile app for tracking workouts and fitness goals,"React Native, UI/UX, Firebase",Health & Fitness,Mobile Developer,Intermediate,10,Remote,Skopje
+P002,SmartStudy,AI application that helps students organize study materials,"Python, Machine Learning, Flask",Education & AI,AI Developer,Intermediate,8,Remote,Tetovo
+P003,ShopEase,E-commerce website for small businesses,"React, JavaScript, CSS",Web Development,Frontend Developer,Intermediate,10,Remote,Skopje
+P004,SecureNet,Platform for monitoring network security threats,"Cybersecurity, Network Security, Python",Cybersecurity,Cybersecurity / DevOps,Advanced,12,Hybrid,Tetovo
+P005,DataVision,Business analytics dashboard for visualizing sales data,"Python, Pandas, SQL",Data Science,Data Scientist,Intermediate,8,Remote,Bitola
+P006,TravelMate,Mobile application for planning trips and travel activities,"Flutter, Dart, Firebase",Travel,Mobile Developer,Beginner,8,Remote,Ohrid
+P007,HealthAI,AI application for analyzing health and fitness information,"Python, Machine Learning, TensorFlow",Health Tech,AI Developer,Advanced,15,Hybrid,Skopje
+P008,DesignHub,Collaborative platform for creating and sharing UI designs,"Figma, UI/UX, Prototyping",Design,UI/UX Designer,Intermediate,10,Remote,Tetovo
+P009,CloudDeploy,Cloud deployment and automation platform,"Docker, Kubernetes, CI/CD",Cloud Computing,Cybersecurity / DevOps,Advanced,12,Remote,Skopje
+P010,BookFlow,Backend system for managing online book reservations,"Java, Spring Boot, SQL",Web Development,Backend Developer,Intermediate,10,Hybrid,Gostivar
