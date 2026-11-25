@@ -39,3 +39,163 @@ U037,Synthetic User 037,"Cybersecurity, Network Security, Python","Cybersecurity
 U038,Synthetic User 038,"Docker, Kubernetes, CI/CD","Cybersecurity, Cloud",Advanced,10,Cybersecurity / DevOps,"Security, Technology",On-site,Bitola
 U039,Synthetic User 039,"AWS, Terraform, Linux","Cybersecurity, Cloud",Intermediate,12,Cybersecurity / DevOps,"Security, Technology",Remote,Ohrid
 U040,Synthetic User 040,"Network Security, Linux, Penetration Testing","Cybersecurity, Cloud",Advanced,15,Cybersecurity / DevOps,"Security, Technology",Hybrid,Gostivar
+U041,Synthetic User 041,"Python, Machine Learning, TensorFlow, SQL, NumPy",Education,Intermediate,5,AI Developer,"AI, Machine Learning, Automation",Hybrid,Tetovo
+U042,Synthetic User 042,"CSS, JavaScript","Design, Business, Web Development",Beginner,3,Frontend Developer,"Education, E-commerce",Hybrid,Bitola
+U043,Synthetic User 043,"Node.js, Express, MongoDB, Git",Business,Intermediate,15,Backend Developer,Web Development,Remote,Kumanovo
+U044,Synthetic User 044,"Kotlin, Android, Firebase, SQLite, UI/UX","Mobile Apps, Education",Intermediate,12,Mobile Developer,"Technology, Education",Hybrid,Skopje
+U045,Synthetic User 045,"Figma, Wireframing, User Research",Mobile Apps,Beginner,10,UI/UX Designer,Web Development,Remote,Kumanovo
+U046,Synthetic User 046,"Data Visualization, Statistics","Health Tech, Data Science, Business",Beginner,18,Data Scientist,"Health Tech, Business, Finance",Remote,Ohrid
+U047,Synthetic User 047,"Linux, Docker, AWS",Security,Intermediate,8,Cybersecurity / DevOps,"Security, Cybersecurity",On-site,Kumanovo
+U048,Synthetic User 048,"Python, Computer Vision, OpenCV","Health Tech, Education, Education & AI",Beginner,20,AI Developer,Education,Hybrid,Prilep
+U049,Synthetic User 049,"JavaScript, Vue, HTML, Git, Tailwind CSS, REST API","Web Development, Education",Advanced,30,Frontend Developer,Design,Remote,Prilep
+U050,Synthetic User 050,"Python, FastAPI, SQL, Linux","E-commerce, Business",Intermediate,20,Backend Developer,"Web Development, E-commerce, Business",Hybrid,Kumanovo
+U051,Synthetic User 051,"JavaScript, React Native","Technology, Travel, Health & Fitness",Beginner,6,Mobile Developer,"Mobile Apps, Travel, Health & Fitness",Remote,Bitola
+U052,Synthetic User 052,"UI/UX, Figma, Usability Testing","User Experience, Web Development, Design",Intermediate,10,UI/UX Designer,User Experience,Remote,Ohrid
+U053,Synthetic User 053,"Python, Pandas, SQL, Data Visualization",Finance,Advanced,30,Data Scientist,Business,Remote,Bitola
+U054,Synthetic User 054,"Network Security, Linux, Penetration Testing",Automation,Beginner,30,Cybersecurity / DevOps,"Cloud Computing, Security, Automation",Hybrid,Struga
+U055,Synthetic User 055,"Python, Computer Vision, OpenCV, NumPy",AI,Advanced,20,AI Developer,"AI, Automation",Remote,Ohrid
+U056,Synthetic User 056,"HTML, Bootstrap",E-commerce,Beginner,8,Frontend Developer,Education,Remote,Struga
+U057,Synthetic User 057,"Java, Spring Boot, SQL",Backend,Beginner,5,Backend Developer,"Databases, Web Development",Hybrid,Kumanovo
+U058,Synthetic User 058,"React Native, JavaScript, Firebase, UI/UX, Figma",Health Tech,Intermediate,8,Mobile Developer,"Travel, Mobile Apps, Health & Fitness",Remote,Struga
+U059,Synthetic User 059,"Figma, Wireframing, User Research","Mobile Apps, Design",Beginner,3,UI/UX Designer,"E-commerce, Design",Hybrid,Tetovo
+U060,Synthetic User 060,"Python, Data Analysis, Scikit-learn, Excel, Statistics","Business, AI",Advanced,15,Data Scientist,Business,Remote,Prilep
+U061,Synthetic User 061,"AWS, Terraform, Linux","Automation, Technology",Beginner,10,Cybersecurity / DevOps,Cloud Computing,Remote,Tetovo
+U062,Synthetic User 062,"Python, Machine Learning, Flask","Education & AI, AI, Machine Learning",Intermediate,6,AI Developer,"Health Tech, Automation, Machine Learning",Remote,Skopje
+U063,Synthetic User 063,"HTML, CSS, JavaScript, Git","Web Development, Design",Advanced,5,Frontend Developer,"Education, Web Development, E-commerce",Remote,Kumanovo
+U064,Synthetic User 064,"Java, Spring Boot, SQL, Git, REST API, Linux",Business,Advanced,3,Backend Developer,"Business, Web Development",Remote,Skopje
+U065,Synthetic User 065,"Swift, iOS, SwiftUI",Travel,Beginner,12,Mobile Developer,Health & Fitness,Remote,Struga
+U066,Synthetic User 066,"Figma, UI Design, Wireframing, User Research, Usability Testing, Accessibility","E-commerce, User Experience, Web Development",Advanced,10,UI/UX Designer,Mobile Apps,Remote,Skopje
+U067,Synthetic User 067,"Python, Data Analysis, Scikit-learn, SQL","Business, Analytics, Health Tech",Intermediate,10,Data Scientist,"Health Tech, Analytics, AI",On-site,Tetovo
+U068,Synthetic User 068,"AWS, Terraform, Linux",Cybersecurity,Beginner,6,Cybersecurity / DevOps,"Cloud Computing, Security",Hybrid,Prilep
+U069,Synthetic User 069,"Python, Machine Learning, TensorFlow","Education, Automation, AI",Intermediate,6,AI Developer,"Automation, Technology",Remote,Tetovo
+U070,Synthetic User 070,"HTML, CSS, JavaScript",Design,Beginner,15,Frontend Developer,"Web Development, E-commerce, Business",On-site,Bitola
+U071,Synthetic User 071,"Java, Spring Boot, SQL, Git, Redis",Databases,Advanced,8,Backend Developer,"Business, Backend, E-commerce",Remote,Skopje
+U072,Synthetic User 072,"Kotlin, Android, Firebase, Git",Health Tech,Intermediate,8,Mobile Developer,"Travel, Health & Fitness",Remote,Ohrid
+U073,Synthetic User 073,"Adobe XD, UI Design, Prototyping","User Experience, Web Development",Intermediate,5,UI/UX Designer,"E-commerce, User Experience, Design",On-site,Gostivar
+U074,Synthetic User 074,"R, Statistics","Health Tech, Analytics",Beginner,5,Data Scientist,"Finance, Health Tech",Remote,Ohrid
+U075,Synthetic User 075,"Docker, Linux, CI/CD",Automation,Beginner,5,Cybersecurity / DevOps,"Cloud Computing, Security, Automation",On-site,Kumanovo
+U076,Synthetic User 076,"Python, NLP, PyTorch","Education & AI, Automation, Technology",Intermediate,10,AI Developer,"Health Tech, Education & AI, Technology",Hybrid,Ohrid
+U077,Synthetic User 077,"JavaScript, Vue, HTML, Git, REST API","Education, Web Development",Intermediate,15,Frontend Developer,"E-commerce, Design",Hybrid,Kumanovo
+U078,Synthetic User 078,"Python, FastAPI, SQL, Git, Redis","Databases, Web Development, E-commerce",Intermediate,8,Backend Developer,"E-commerce, Business, Web Development",Hybrid,Ohrid
+U079,Synthetic User 079,"Swift, iOS, SwiftUI, UI/UX",Health Tech,Advanced,30,Mobile Developer,"Mobile Apps, Health Tech, Education",Hybrid,Prilep
+U080,Synthetic User 080,"Figma, Wireframing, User Research","Design, E-commerce, Mobile Apps",Intermediate,20,UI/UX Designer,Mobile Apps,Remote,Ohrid
+U081,Synthetic User 081,"Python, Pandas, SQL, Machine Learning, Data Visualization, Excel, Statistics","Finance, Health Tech",Advanced,6,Data Scientist,"Finance, AI",Hybrid,Struga
+U082,Synthetic User 082,"Cybersecurity, Network Security, Python, AWS, Bash","Cloud Computing, Security",Intermediate,8,Cybersecurity / DevOps,"Cybersecurity, Security",Remote,Kumanovo
+U083,Synthetic User 083,"Python, Machine Learning, TensorFlow, NumPy, Git","Machine Learning, Education",Advanced,15,AI Developer,"Education, AI, Health Tech",Remote,Struga
+U084,Synthetic User 084,"JavaScript, React, CSS, Bootstrap","Web Development, Business, Design",Intermediate,10,Frontend Developer,E-commerce,Hybrid,Prilep
+U085,Synthetic User 085,"Python, Flask, PostgreSQL, SQL, Git","Databases, Business",Intermediate,15,Backend Developer,"Backend, Web Development",Remote,Prilep
+U086,Synthetic User 086,"React Native, JavaScript, Firebase","Education, Mobile Apps, Health Tech",Intermediate,30,Mobile Developer,"Education, Mobile Apps, Technology",Remote,Struga
+U087,Synthetic User 087,"Adobe XD, UI Design, Prototyping","Mobile Apps, Web Development",Beginner,10,UI/UX Designer,"User Experience, Web Development",Hybrid,Prilep
+U088,Synthetic User 088,"Python, Pandas, SQL",Health Tech,Beginner,30,Data Scientist,"Data Science, Analytics, Business",Remote,Tetovo
+U089,Synthetic User 089,"Cybersecurity, Network Security, Python",Automation,Intermediate,6,Cybersecurity / DevOps,Cloud Computing,Remote,Skopje
+U090,Synthetic User 090,"Python, NLP, Scikit-learn, Git","Technology, Education & AI",Intermediate,25,AI Developer,Automation,On-site,Skopje
+U091,Synthetic User 091,"JavaScript, React, CSS, Figma","Web Development, E-commerce, Business",Intermediate,8,Frontend Developer,"Business, Education, E-commerce",Remote,Ohrid
+U092,Synthetic User 092,"MongoDB, Node.js","E-commerce, Backend",Beginner,30,Backend Developer,"Business, Web Development, E-commerce",Remote,Prilep
+U093,Synthetic User 093,"Kotlin, Android, Firebase, REST API, SQLite, Figma, UI/UX","Health & Fitness, Education",Advanced,18,Mobile Developer,"Travel, Education, Health Tech",Remote,Gostivar
+U094,Synthetic User 094,"Wireframing, User Research",Web Development,Beginner,3,UI/UX Designer,"E-commerce, Web Development, Mobile Apps",Remote,Kumanovo
+U095,Synthetic User 095,"Python, Data Analysis, Scikit-learn","Analytics, Health Tech",Beginner,20,Data Scientist,"Health Tech, Analytics, Data Science",On-site,Skopje
+U096,Synthetic User 096,"AWS, Terraform, Linux","Cloud Computing, Technology, Security",Beginner,5,Cybersecurity / DevOps,"Technology, Automation, Cybersecurity",Remote,Prilep
+U097,Synthetic User 097,"Python, Deep Learning, PyTorch, Data Analysis, SQL","Automation, Technology",Intermediate,20,AI Developer,"Health Tech, Machine Learning",Remote,Struga
+U098,Synthetic User 098,"TypeScript, Tailwind CSS","Web Development, Design",Beginner,18,Frontend Developer,Design,Remote,Gostivar
+U099,Synthetic User 099,"Java, Spring Boot, SQL, Git, REST API, Docker","Web Development, Databases",Advanced,20,Backend Developer,"Web Development, E-commerce",Remote,Bitola
+U100,Synthetic User 100,"React Native, JavaScript, Firebase",Education,Intermediate,18,Mobile Developer,"Health Tech, Technology",Remote,Tetovo
+U101,Synthetic User 101,"Figma, Design Systems","Design, E-commerce",Beginner,25,UI/UX Designer,Mobile Apps,On-site,Skopje
+U102,Synthetic User 102,"Python, Pandas, SQL, Statistics, Machine Learning, Excel, Data Visualization","AI, Analytics",Advanced,25,Data Scientist,"AI, Analytics, Data Science",On-site,Skopje
+U103,Synthetic User 103,"Cybersecurity, Network Security, Python, AWS, Bash",Cloud Computing,Advanced,20,Cybersecurity / DevOps,Cloud Computing,Remote,Tetovo
+U104,Synthetic User 104,"Python, NLP, PyTorch, FastAPI, SQL",Education,Intermediate,18,AI Developer,"Machine Learning, Education & AI",Remote,Ohrid
+U105,Synthetic User 105,"HTML, CSS, Bootstrap, Tailwind CSS, Figma","Design, Education, Business",Advanced,3,Frontend Developer,Web Development,Remote,Gostivar
+U106,Synthetic User 106,"C#, ASP.NET, SQL Server, Redis",Backend,Intermediate,20,Backend Developer,"Business, Backend, Databases",Hybrid,Struga
+U107,Synthetic User 107,"Kotlin, Android, Firebase","Travel, Education, Technology",Beginner,8,Mobile Developer,Mobile Apps,On-site,Tetovo
+U108,Synthetic User 108,"Figma, UI Design, Wireframing, User Research, Accessibility, Graphic Design","E-commerce, Web Development",Advanced,30,UI/UX Designer,"Mobile Apps, Web Development",Hybrid,Skopje
+U109,Synthetic User 109,"Python, SQL, Power BI, Excel","Data Science, Business, Analytics",Intermediate,10,Data Scientist,"Health Tech, AI",Hybrid,Prilep
+U110,Synthetic User 110,"Network Security, Linux, Penetration Testing, Bash",Security,Advanced,15,Cybersecurity / DevOps,"Security, Cybersecurity",On-site,Tetovo
+U111,Synthetic User 111,"Python, Machine Learning, Flask, FastAPI",Education,Intermediate,30,AI Developer,"Education & AI, Automation, Health Tech",Remote,Tetovo
+U112,Synthetic User 112,"Next.js, TypeScript","Business, Web Development, Education",Beginner,6,Frontend Developer,"Education, Design, E-commerce",Remote,Tetovo
+U113,Synthetic User 113,"Python, Django, PostgreSQL",Backend,Intermediate,18,Backend Developer,Databases,On-site,Gostivar
+U114,Synthetic User 114,"Flutter, Dart, Firebase, SQLite","Health & Fitness, Health Tech",Intermediate,25,Mobile Developer,"Health & Fitness, Health Tech, Technology",Hybrid,Bitola
+U115,Synthetic User 115,"Adobe XD, UI Design, Prototyping, HTML, User Research, Usability Testing, Accessibility","User Experience, Web Development",Advanced,20,UI/UX Designer,Web Development,Remote,Kumanovo
+U116,Synthetic User 116,"Python, Pandas, Tableau, Excel","Business, Health Tech",Intermediate,3,Data Scientist,"AI, Business, Health Tech",Remote,Struga
+U117,Synthetic User 117,"AWS, Terraform, Linux, Git","Cybersecurity, Cloud Computing",Intermediate,18,Cybersecurity / DevOps,"Automation, Security, Cybersecurity",Remote,Struga
+U118,Synthetic User 118,"Python, NLP, Scikit-learn","Education, AI, Health Tech",Beginner,15,AI Developer,"Education & AI, Automation",Hybrid,Kumanovo
+U119,Synthetic User 119,"React, Next.js, TypeScript, REST API, Bootstrap, Figma, HTML",Design,Advanced,5,Frontend Developer,"E-commerce, Design, Education",Remote,Skopje
+U120,Synthetic User 120,"Python, Flask, PostgreSQL","Databases, Business",Intermediate,12,Backend Developer,Web Development,Hybrid,Gostivar
+U121,Synthetic User 121,"React Native, JavaScript, Firebase",Education,Intermediate,6,Mobile Developer,"Education, Health & Fitness",Remote,Prilep
+U122,Synthetic User 122,"Figma, Wireframing, User Research, Usability Testing",Mobile Apps,Intermediate,10,UI/UX Designer,"User Experience, Web Development",Hybrid,Struga
+U123,Synthetic User 123,"Python, Pandas, Statistics, NumPy, Excel","Finance, Analytics",Advanced,10,Data Scientist,"AI, Analytics, Health Tech",Remote,Prilep
+U124,Synthetic User 124,"Linux, Docker, AWS, Network Security, Bash","Automation, Security",Advanced,15,Cybersecurity / DevOps,"Security, Cybersecurity, Automation",Remote,Tetovo
+U125,Synthetic User 125,"Python, NLP, PyTorch, SQL, NumPy, Git, Pandas","Education, Automation, Education & AI",Advanced,30,AI Developer,"Technology, Machine Learning, Education",Remote,Tetovo
+U126,Synthetic User 126,"HTML, Vue","Design, Web Development, Education",Beginner,8,Frontend Developer,"Business, Design",Remote,Kumanovo
+U127,Synthetic User 127,"Node.js, Express, MongoDB","Backend, Business",Intermediate,5,Backend Developer,"Business, Web Development, Databases",Remote,Ohrid
+U128,Synthetic User 128,"React Native, TypeScript, Firebase, Figma, REST API, UI/UX, Git",Travel,Advanced,30,Mobile Developer,"Mobile Apps, Health Tech, Travel",Hybrid,Gostivar
+U129,Synthetic User 129,"Figma, UI Design, Wireframing, Accessibility","Mobile Apps, Web Development, Design",Intermediate,8,UI/UX Designer,"E-commerce, User Experience, Web Development",Hybrid,Struga
+U130,Synthetic User 130,"R, Statistics, Data Visualization, NumPy, Excel, SQL, Machine Learning","AI, Data Science",Advanced,20,Data Scientist,Business,Remote,Struga
+U131,Synthetic User 131,"Docker, Linux, CI/CD, Network Security, Bash","Cloud Computing, Technology, Security",Intermediate,25,Cybersecurity / DevOps,Technology,Remote,Gostivar
+U132,Synthetic User 132,"Deep Learning, PyTorch",Technology,Beginner,12,AI Developer,"AI, Machine Learning",Hybrid,Kumanovo
+U133,Synthetic User 133,"TypeScript, React",Design,Beginner,12,Frontend Developer,"Education, Web Development, Business",Remote,Bitola
+U134,Synthetic User 134,"Java, Spring Boot, SQL","Databases, E-commerce, Web Development",Intermediate,10,Backend Developer,"Databases, Web Development",On-site,Bitola
+U135,Synthetic User 135,"Kotlin, Java, Android, Git, UI/UX, Figma",Mobile Apps,Advanced,12,Mobile Developer,"Health & Fitness, Education",Remote,Gostivar
+U136,Synthetic User 136,"Figma, UI Design, Wireframing","Design, E-commerce, Mobile Apps",Beginner,18,UI/UX Designer,"User Experience, Design",Hybrid,Tetovo
+U137,Synthetic User 137,"Python, Pandas, Statistics, SQL, Excel","Data Science, Health Tech, AI",Intermediate,18,Data Scientist,"AI, Data Science",Hybrid,Struga
+U138,Synthetic User 138,"Linux, Docker, AWS","Cloud Computing, Cybersecurity, Technology",Beginner,15,Cybersecurity / DevOps,"Automation, Security",On-site,Gostivar
+U139,Synthetic User 139,"Python, Machine Learning, Flask, Pandas","AI, Machine Learning, Automation",Intermediate,18,AI Developer,"Technology, Education, Health Tech",On-site,Prilep
+U140,Synthetic User 140,"JavaScript, Vue, HTML","Web Development, E-commerce",Beginner,12,Frontend Developer,"E-commerce, Education",On-site,Struga
+U141,Synthetic User 141,"Django, Python","Business, Databases, E-commerce",Beginner,20,Backend Developer,E-commerce,Hybrid,Skopje
+U142,Synthetic User 142,"React Native, TypeScript, Firebase, UI/UX","Education, Travel",Intermediate,20,Mobile Developer,"Mobile Apps, Education",Remote,Struga
+U143,Synthetic User 143,"Figma, UI/UX, Prototyping","User Experience, Design, Mobile Apps",Beginner,25,UI/UX Designer,"Mobile Apps, Web Development, User Experience",Hybrid,Tetovo
+U144,Synthetic User 144,"Python, Pandas, Statistics, SQL, NumPy",Analytics,Intermediate,3,Data Scientist,"Analytics, Health Tech, Finance",Remote,Bitola
+U145,Synthetic User 145,"AWS, Terraform, Linux",Cybersecurity,Intermediate,8,Cybersecurity / DevOps,Automation,Remote,Struga
+U146,Synthetic User 146,"Python, Deep Learning, PyTorch","Education & AI, Automation, Machine Learning",Beginner,6,AI Developer,AI,Remote,Tetovo
+U147,Synthetic User 147,"TypeScript, React, Tailwind CSS, Bootstrap","Education, Business",Intermediate,20,Frontend Developer,"E-commerce, Design",Remote,Prilep
+U148,Synthetic User 148,"Python, Flask, PostgreSQL","Business, Web Development, Backend",Beginner,3,Backend Developer,"E-commerce, Web Development",Remote,Ohrid
+U149,Synthetic User 149,"Flutter, Dart, Firebase, REST API",Mobile Apps,Intermediate,6,Mobile Developer,"Technology, Health Tech",Remote,Ohrid
+U150,Synthetic User 150,"Figma, UI Design, Wireframing, Accessibility","Design, Web Development",Intermediate,5,UI/UX Designer,Web Development,On-site,Prilep
+U151,Synthetic User 151,"Python, Pandas, Statistics, Excel, SQL",AI,Intermediate,6,Data Scientist,Analytics,Hybrid,Struga
+U152,Synthetic User 152,"Docker, Kubernetes, CI/CD, AWS",Cloud Computing,Advanced,20,Cybersecurity / DevOps,"Automation, Technology",Remote,Gostivar
+U153,Synthetic User 153,"Python, NLP, Scikit-learn, NumPy",Automation,Intermediate,8,AI Developer,"AI, Automation, Machine Learning",On-site,Kumanovo
+U154,Synthetic User 154,"HTML, CSS, Bootstrap",Web Development,Intermediate,8,Frontend Developer,E-commerce,Remote,Bitola
+U155,Synthetic User 155,"Python, Flask, PostgreSQL",Backend,Intermediate,30,Backend Developer,"E-commerce, Backend",On-site,Kumanovo
+U156,Synthetic User 156,"React Native, TypeScript, Firebase, Git, SQLite, UI/UX","Health Tech, Travel",Advanced,12,Mobile Developer,"Education, Mobile Apps",Hybrid,Gostivar
+U157,Synthetic User 157,"Figma, UI/UX, Prototyping","User Experience, Design",Intermediate,25,UI/UX Designer,"Design, Web Development, Mobile Apps",Hybrid,Tetovo
+U158,Synthetic User 158,"Python, Pandas, Tableau, Machine Learning, SQL","AI, Finance, Business",Intermediate,5,Data Scientist,AI,Hybrid,Kumanovo
+U159,Synthetic User 159,"Linux, Docker, AWS, Python, Network Security","Technology, Automation, Security",Advanced,12,Cybersecurity / DevOps,"Automation, Cloud Computing, Technology",On-site,Prilep
+U160,Synthetic User 160,"Python, Deep Learning, PyTorch, Data Analysis, Pandas","Machine Learning, Education & AI, AI",Intermediate,30,AI Developer,"AI, Automation",Remote,Gostivar
+U161,Synthetic User 161,"HTML, CSS, Bootstrap, Git, Tailwind CSS",Education,Intermediate,30,Frontend Developer,"Design, E-commerce, Education",Hybrid,Prilep
+U162,Synthetic User 162,"Flask, PostgreSQL","Business, Databases, E-commerce",Beginner,30,Backend Developer,"E-commerce, Web Development, Business",Remote,Kumanovo
+U163,Synthetic User 163,"Flutter, Dart","Health & Fitness, Technology",Beginner,5,Mobile Developer,Health & Fitness,Remote,Skopje
+U164,Synthetic User 164,"UI/UX, Figma, Usability Testing, User Research, Accessibility","User Experience, Mobile Apps, E-commerce",Intermediate,6,UI/UX Designer,"Mobile Apps, E-commerce",Hybrid,Bitola
+U165,Synthetic User 165,"Python, Pandas, SQL, Excel","Health Tech, Business, AI",Intermediate,20,Data Scientist,"Analytics, AI, Business",Remote,Struga
+U166,Synthetic User 166,"Cybersecurity, Network Security, Python, Bash, Linux, AWS","Automation, Technology",Advanced,25,Cybersecurity / DevOps,Cloud Computing,Remote,Gostivar
+U167,Synthetic User 167,"Python, Computer Vision, OpenCV","AI, Machine Learning, Automation",Beginner,5,AI Developer,Education & AI,Hybrid,Gostivar
+U168,Synthetic User 168,"React, Next.js, TypeScript","Web Development, Design",Intermediate,15,Frontend Developer,"E-commerce, Web Development",Remote,Kumanovo
+U169,Synthetic User 169,"Python, Django, PostgreSQL",Web Development,Beginner,6,Backend Developer,"Web Development, Business",Remote,Gostivar
+U170,Synthetic User 170,"React Native, JavaScript, Firebase, SQLite, Figma","Mobile Apps, Technology, Education",Advanced,20,Mobile Developer,"Health & Fitness, Technology",On-site,Prilep
+U171,Synthetic User 171,"UI Design, Adobe XD",Mobile Apps,Beginner,5,UI/UX Designer,"E-commerce, Web Development",Remote,Struga
+U172,Synthetic User 172,"Python, Pandas, SQL, Statistics, Machine Learning","Business, Analytics, AI",Intermediate,12,Data Scientist,Finance,Remote,Prilep
+U173,Synthetic User 173,"CI/CD, Linux",Automation,Beginner,18,Cybersecurity / DevOps,"Automation, Cybersecurity, Cloud Computing",Remote,Prilep
+U174,Synthetic User 174,"Python, Deep Learning, PyTorch, SQL",Education & AI,Advanced,30,AI Developer,Machine Learning,Hybrid,Kumanovo
+U175,Synthetic User 175,"TypeScript, React, Tailwind CSS","Design, Business, E-commerce",Beginner,5,Frontend Developer,"Design, Education",Hybrid,Struga
+U176,Synthetic User 176,"Java, SQL","Business, Backend",Beginner,30,Backend Developer,"Backend, Business, Web Development",Remote,Kumanovo
+U177,Synthetic User 177,"Kotlin, Android, Firebase, REST API, UI/UX, Git","Health Tech, Technology",Advanced,18,Mobile Developer,"Travel, Health & Fitness",Hybrid,Kumanovo
+U178,Synthetic User 178,"UI/UX, Figma, Usability Testing, Accessibility, CSS, User Research","E-commerce, Mobile Apps",Advanced,5,UI/UX Designer,"User Experience, E-commerce, Design",Remote,Gostivar
+U179,Synthetic User 179,"Python, Pandas, Tableau",Health Tech,Beginner,3,Data Scientist,"Analytics, AI",Hybrid,Kumanovo
+U180,Synthetic User 180,"AWS, Terraform, Linux, Python",Technology,Intermediate,3,Cybersecurity / DevOps,"Automation, Cloud Computing",Remote,Struga
+U181,Synthetic User 181,"TensorFlow, Machine Learning","Health Tech, Automation",Beginner,6,AI Developer,Automation,Hybrid,Kumanovo
+U182,Synthetic User 182,"HTML, CSS, JavaScript, Git, REST API","E-commerce, Education",Intermediate,3,Frontend Developer,Web Development,Hybrid,Struga
+U183,Synthetic User 183,"C#, ASP.NET, SQL Server","Business, Backend",Intermediate,10,Backend Developer,E-commerce,Hybrid,Struga
+U184,Synthetic User 184,"iOS, Swift","Health Tech, Mobile Apps, Travel",Beginner,10,Mobile Developer,"Travel, Mobile Apps, Technology",On-site,Bitola
+U185,Synthetic User 185,"UI/UX, Figma, Usability Testing",Mobile Apps,Intermediate,18,UI/UX Designer,Mobile Apps,Remote,Kumanovo
+U186,Synthetic User 186,"Python, Pandas, Tableau","Data Science, Health Tech, Analytics",Intermediate,20,Data Scientist,"Health Tech, AI",Remote,Prilep
+U187,Synthetic User 187,"Linux, Docker, AWS, Bash, Network Security",Technology,Advanced,6,Cybersecurity / DevOps,"Automation, Security",On-site,Bitola
+U188,Synthetic User 188,"Python, NLP, Scikit-learn, Data Analysis",Technology,Intermediate,6,AI Developer,Automation,Remote,Bitola
+U189,Synthetic User 189,"CSS, Bootstrap",E-commerce,Beginner,10,Frontend Developer,Education,Remote,Gostivar
+U190,Synthetic User 190,"Python, Django, PostgreSQL, Linux, Git","E-commerce, Databases, Web Development",Intermediate,3,Backend Developer,"E-commerce, Business, Backend",Hybrid,Tetovo
+U191,Synthetic User 191,"React Native, TypeScript, Firebase","Health & Fitness, Education, Health Tech",Beginner,30,Mobile Developer,"Technology, Mobile Apps, Health Tech",Hybrid,Gostivar
+U192,Synthetic User 192,"Figma, UI Design, Wireframing, HTML","Design, E-commerce",Intermediate,15,UI/UX Designer,Web Development,Remote,Ohrid
+U193,Synthetic User 193,"Python, Data Analysis, Scikit-learn","Analytics, Health Tech, AI",Beginner,20,Data Scientist,Analytics,Hybrid,Kumanovo
+U194,Synthetic User 194,"Linux, Docker, AWS","Cloud Computing, Automation",Beginner,10,Cybersecurity / DevOps,Cybersecurity,On-site,Prilep
+U195,Synthetic User 195,"Python, NLP, Scikit-learn","Machine Learning, Education & AI, Education",Beginner,20,AI Developer,Health Tech,Remote,Gostivar
+U196,Synthetic User 196,"HTML, CSS, JavaScript, Tailwind CSS","Design, Education",Intermediate,10,Frontend Developer,"E-commerce, Web Development, Business",Remote,Struga
+U197,Synthetic User 197,"Django, Python","Business, Backend",Beginner,3,Backend Developer,"Web Development, Backend",Hybrid,Ohrid
+U198,Synthetic User 198,"Flutter, Dart, Firebase","Education, Health Tech",Intermediate,6,Mobile Developer,"Travel, Education, Mobile Apps",On-site,Prilep
+U199,Synthetic User 199,"Adobe XD, UI Design, Prototyping, HTML, Graphic Design",E-commerce,Intermediate,3,UI/UX Designer,"Web Development, Design, E-commerce",Remote,Kumanovo
+U200,Synthetic User 200,"Python, Pandas, Tableau, Machine Learning, Data Visualization, Statistics, Excel","Analytics, Business, AI",Advanced,20,Data Scientist,"Health Tech, Analytics, Finance",Hybrid,Struga

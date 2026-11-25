@@ -1,0 +1,16 @@
+Test ID,Feature,Expected Result,Actual Result,Status
+T01,AI Matching - FitTrack,Return three eligible candidates,Three eligible candidates returned,Passed
+T02,AI Matching - MarketPlace,Display no suitable collaborators message,No suitable collaborators message displayed,Passed
+T03,Mandatory filters,Reject ineligible candidates,Zero invalid recommendations,Passed
+T04,Experience display,Display years of experience,Experience ranges displayed correctly,Passed
+T05,Profile creation,Save valid user profile,Test profile created,Passed
+T06,Project creation,Save valid project,Test project created,Passed
+T07,New project matching,Generate recommendations for new project,Recommendations generated,Passed
+T08,Invalid profile,Reject incomplete profile,Validation message displayed,Passed
+T09,Invalid project,Reject incomplete project,Validation message displayed,Passed
+T10,Community search,Find matching user,Test user found,Passed
+T11,Community filtering,Display matching profiles,Matching profiles displayed,Passed
+T12,Project search,Find matching project,Test project found,Passed
+T13,Project filtering,Display projects by category,Matching projects displayed,Passed
+T14,Data persistence,Retain saved data after refresh,Test data retained,Passed
+T15,Dataset restoration,Restore 200 users and 30 projects,200 users and 30 projects confirmed,Passed

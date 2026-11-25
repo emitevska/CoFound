@@ -1,0 +1,21 @@
+project_id,project,method,relevant_candidates,precision_at_3,recall_at_3,mrr,ndcg_at_3
+P001,FitTrack,Baseline,2,0.6666666666666666,1.0,1.0,1.0
+P001,FitTrack,AI Matching,2,0.6666666666666666,1.0,1.0,1.0
+P002,SmartStudy,Baseline,2,0.6666666666666666,1.0,1.0,1.0
+P002,SmartStudy,AI Matching,2,0.6666666666666666,1.0,1.0,1.0
+P003,ShopEase,Baseline,0,0.0,,0.0,
+P003,ShopEase,AI Matching,0,0.0,,0.0,
+P004,SecureNet,Baseline,0,0.0,,0.0,
+P004,SecureNet,AI Matching,0,0.0,,0.0,
+P005,DataVision,Baseline,3,0.6666666666666666,0.6666666666666666,0.5,0.5307212739772434
+P005,DataVision,AI Matching,3,0.6666666666666666,0.6666666666666666,0.5,0.5307212739772434
+P006,TravelMate,Baseline,1,0.3333333333333333,1.0,1.0,1.0
+P006,TravelMate,AI Matching,1,0.3333333333333333,1.0,1.0,1.0
+P007,HealthAI,Baseline,1,0.3333333333333333,1.0,0.3333333333333333,0.5
+P007,HealthAI,AI Matching,1,0.3333333333333333,1.0,1.0,1.0
+P008,DesignHub,Baseline,2,0.6666666666666666,1.0,0.5,0.6934264036172708
+P008,DesignHub,AI Matching,2,0.6666666666666666,1.0,1.0,0.9197207891481876
+P009,CloudDeploy,Baseline,0,0.0,,0.0,
+P009,CloudDeploy,AI Matching,0,0.0,,0.0,
+P010,BookFlow,Baseline,0,0.0,,0.0,
+P010,BookFlow,AI Matching,0,0.0,,0.0,

@@ -1,4 +1,3 @@
-
 import pandas as pd
 from pathlib import Path
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -202,10 +201,21 @@ def calculate_collaboration_match(user_mode, project_mode):
 # 9. RECOMMEND COLLABORATORS
 # ==========================================
 
-def recommend_collaborators(project_id, top_n=3, verbose=True):
+def recommend_collaborators(
+    project_id,
+    top_n=3,
+    verbose=True,
+    mandatory_filters=True
+):
     """
     Recommend the top candidates for a project
     using content-based matching and weighted ranking.
+
+    mandatory_filters=True:
+        Improved AI method with mandatory requirements.
+
+    mandatory_filters=False:
+        Original AI method for comparison.
     """
 
     selected = projects[projects["project_id"] == project_id]
@@ -355,13 +365,73 @@ def recommend_collaborators(project_id, top_n=3, verbose=True):
     # 15. FILTER AND RANK CANDIDATES
     # ======================================
 
-    # Exclude candidates who have neither matching
-    # required skills nor positive text similarity.
+    if mandatory_filters:
 
-    results = results[
-        (results["skill_match"] > 0) |
-        (results["text_similarity"] > 0)
-    ].copy()
+        # Mandatory filter 1: Required skills
+        # A candidate must possess at least two required skills.
+        # If the project requires only one skill, one is sufficient.
+
+        required_skills = split_items(project["required_skills"])
+
+        minimum_skills = min(2, len(required_skills))
+
+        results["matched_skill_count"] = results["skills"].apply(
+            lambda skills: len(split_items(skills) & required_skills)
+        )
+
+        # Mandatory filter 2: Experience
+        # The candidate must meet or exceed the required level.
+
+        # Mandatory filter 3: Availability
+        # The candidate must have enough available hours per week.
+
+        available = pd.to_numeric(
+            results["availability"],
+            errors="coerce"
+        )
+
+        required_hours = pd.to_numeric(
+            project["hours_per_week"],
+            errors="coerce"
+        )
+
+        # Reject projects with invalid mandatory requirements.
+
+        if (
+            not required_skills
+            or pd.isna(required_hours)
+            or required_hours <= 0
+        ):
+            results = results.iloc[0:0].copy()
+
+        else:
+
+            # Apply all three mandatory filters.
+            # A candidate must satisfy every condition.
+
+            results = results[
+                (results["matched_skill_count"] >= minimum_skills) &
+                (results["experience_match"] == 1.0) &
+                (available >= required_hours)
+            ].copy()
+
+        if verbose:
+            print(
+                "Eligible candidates:",
+                len(results),
+                "/",
+                len(users)
+            )
+
+    else:
+
+        # Original AI method, retained for controlled comparison.
+        # Candidates need matching skills or positive text similarity.
+
+        results = results[
+            (results["skill_match"] > 0) |
+            (results["text_similarity"] > 0)
+        ].copy()
 
     # Sort by final score.
     # User ID provides deterministic tie-breaking.
@@ -370,6 +440,9 @@ def recommend_collaborators(project_id, top_n=3, verbose=True):
         by=["final_score", "user_id"],
         ascending=[False, True]
     )
+
+    # Return up to three eligible candidates.
+    # If fewer candidates qualify, return only those candidates.
 
     top_results = results.head(top_n).copy()
 
@@ -393,45 +466,54 @@ def recommend_collaborators(project_id, top_n=3, verbose=True):
                 print("   Skills:", user["skills"])
                 print("   Preferred Role:", user["preferred_role"])
                 print("   Experience:", user["experience"])
+
                 print(
                     "   Availability:",
                     user["availability"],
                     "hours/week"
                 )
+
                 print(
                     "   Text Similarity:",
                     round(user["text_similarity"], 4)
                 )
+
                 print(
                     "   Skill Match:",
                     round(user["skill_match"] * 100, 2),
                     "%"
                 )
+
                 print(
                     "   Interest Match:",
                     round(user["interest_match"] * 100, 2),
                     "%"
                 )
+
                 print(
                     "   Availability Match:",
                     round(user["availability_match"] * 100, 2),
                     "%"
                 )
+
                 print(
                     "   Role Match:",
                     round(user["role_match"] * 100, 2),
                     "%"
                 )
+
                 print(
                     "   Experience Match:",
                     round(user["experience_match"] * 100, 2),
                     "%"
                 )
+
                 print(
                     "   Collaboration Match:",
                     round(user["collaboration_match"] * 100, 2),
                     "%"
                 )
+
                 print(
                     "   Final Match Score:",
                     user["match_score"],

@@ -1,0 +1,41 @@
+user_id,name,skills,interests,experience,availability,preferred_role,preferred_project_types,collaboration_mode,location
+U001,Elena,"UI/UX, Figma","Design, Mobile Apps",Intermediate,10,UI/UX Designer,"Mobile Apps, Design",Remote,Tetovo
+U002,Marko,"JavaScript, React Native, Firebase","Mobile Apps, Health Tech",Advanced,12,Mobile Developer,"Mobile Apps, Health Tech",Hybrid,Skopje
+U003,Ana,"Python, Machine Learning, Flask","AI, Web Development",Intermediate,8,AI Developer,"AI, Education",Remote,Tetovo
+U004,Stefan,"Java, SQL, Spring Boot","Databases, Backend",Advanced,5,Backend Developer,"Backend, Databases",Hybrid,Skopje
+U005,Marija,"CSS, JavaScript","Web Design, Frontend",Beginner,10,Frontend Developer,"Web Development, Design",Remote,Bitola
+U006,Synthetic User 006,"Python, Machine Learning, TensorFlow","AI, Machine Learning",Beginner,5,AI Developer,"AI, Education",Remote,Tetovo
+U007,Synthetic User 007,"Python, NLP, Scikit-learn","AI, Machine Learning",Intermediate,8,AI Developer,"AI, Education",Hybrid,Skopje
+U008,Synthetic User 008,"Python, Deep Learning, PyTorch","AI, Machine Learning",Advanced,10,AI Developer,"AI, Education",On-site,Bitola
+U009,Synthetic User 009,"Python, Computer Vision, OpenCV","AI, Machine Learning",Intermediate,12,AI Developer,"AI, Education",Remote,Ohrid
+U010,Synthetic User 010,"Python, Machine Learning, Flask","AI, Machine Learning",Advanced,15,AI Developer,"AI, Education",Hybrid,Gostivar
+U011,Synthetic User 011,"HTML, CSS, JavaScript","Web Design, Frontend",Beginner,5,Frontend Developer,"Web Development, Design",Remote,Tetovo
+U012,Synthetic User 012,"JavaScript, React, CSS","Web Design, Frontend",Intermediate,8,Frontend Developer,"Web Development, Design",Hybrid,Skopje
+U013,Synthetic User 013,"TypeScript, React, Tailwind CSS","Web Design, Frontend",Advanced,10,Frontend Developer,"Web Development, Design",On-site,Bitola
+U014,Synthetic User 014,"JavaScript, Vue, HTML","Web Design, Frontend",Intermediate,12,Frontend Developer,"Web Development, Design",Remote,Ohrid
+U015,Synthetic User 015,"React, Next.js, TypeScript","Web Design, Frontend",Advanced,15,Frontend Developer,"Web Development, Design",Hybrid,Gostivar
+U016,Synthetic User 016,"Python, Django, PostgreSQL","Backend, Databases",Beginner,5,Backend Developer,"Web Development, Business",Remote,Tetovo
+U017,Synthetic User 017,"Java, Spring Boot, SQL","Backend, Databases",Intermediate,8,Backend Developer,"Web Development, Business",Hybrid,Skopje
+U018,Synthetic User 018,"Node.js, Express, MongoDB","Backend, Databases",Advanced,10,Backend Developer,"Web Development, Business",On-site,Bitola
+U019,Synthetic User 019,"Python, FastAPI, SQL","Backend, Databases",Intermediate,12,Backend Developer,"Web Development, Business",Remote,Ohrid
+U020,Synthetic User 020,"C#, ASP.NET, SQL Server","Backend, Databases",Advanced,15,Backend Developer,"Web Development, Business",Hybrid,Gostivar
+U021,Synthetic User 021,"Kotlin, Android, Firebase","Mobile Apps, Technology",Beginner,5,Mobile Developer,"Mobile Apps, Health Tech",Remote,Tetovo
+U022,Synthetic User 022,"Swift, iOS, SwiftUI","Mobile Apps, Technology",Intermediate,8,Mobile Developer,"Mobile Apps, Health Tech",Hybrid,Skopje
+U023,Synthetic User 023,"Flutter, Dart, Firebase","Mobile Apps, Technology",Advanced,10,Mobile Developer,"Mobile Apps, Health Tech",On-site,Bitola
+U024,Synthetic User 024,"React Native, JavaScript, Firebase","Mobile Apps, Technology",Intermediate,12,Mobile Developer,"Mobile Apps, Health Tech",Remote,Ohrid
+U025,Synthetic User 025,"Kotlin, Java, Android","Mobile Apps, Technology",Advanced,15,Mobile Developer,"Mobile Apps, Health Tech",Hybrid,Gostivar
+U026,Synthetic User 026,"Figma, UI/UX, Prototyping","Design, User Experience",Beginner,5,UI/UX Designer,"Mobile Apps, Design",Remote,Tetovo
+U027,Synthetic User 027,"Figma, Wireframing, User Research","Design, User Experience",Intermediate,8,UI/UX Designer,"Mobile Apps, Design",Hybrid,Skopje
+U028,Synthetic User 028,"Adobe XD, UI Design, Prototyping","Design, User Experience",Advanced,10,UI/UX Designer,"Mobile Apps, Design",On-site,Bitola
+U029,Synthetic User 029,"Figma, Design Systems, UX Research","Design, User Experience",Intermediate,12,UI/UX Designer,"Mobile Apps, Design",Remote,Ohrid
+U030,Synthetic User 030,"UI/UX, Figma, Usability Testing","Design, User Experience",Advanced,15,UI/UX Designer,"Mobile Apps, Design",Hybrid,Gostivar
+U031,Synthetic User 031,"Python, Pandas, SQL","Data Science, Analytics",Beginner,5,Data Scientist,"AI, Business",Remote,Tetovo
+U032,Synthetic User 032,"Python, Data Analysis, Scikit-learn","Data Science, Analytics",Intermediate,8,Data Scientist,"AI, Business",Hybrid,Skopje
+U033,Synthetic User 033,"R, Statistics, Data Visualization","Data Science, Analytics",Advanced,10,Data Scientist,"AI, Business",On-site,Bitola
+U034,Synthetic User 034,"Python, SQL, Power BI","Data Science, Analytics",Intermediate,12,Data Scientist,"AI, Business",Remote,Ohrid
+U035,Synthetic User 035,"Python, Pandas, Tableau","Data Science, Analytics",Advanced,15,Data Scientist,"AI, Business",Hybrid,Gostivar
+U036,Synthetic User 036,"Linux, Docker, AWS","Cybersecurity, Cloud",Beginner,5,Cybersecurity / DevOps,"Security, Technology",Remote,Tetovo
+U037,Synthetic User 037,"Cybersecurity, Network Security, Python","Cybersecurity, Cloud",Intermediate,8,Cybersecurity / DevOps,"Security, Technology",Hybrid,Skopje
+U038,Synthetic User 038,"Docker, Kubernetes, CI/CD","Cybersecurity, Cloud",Advanced,10,Cybersecurity / DevOps,"Security, Technology",On-site,Bitola
+U039,Synthetic User 039,"AWS, Terraform, Linux","Cybersecurity, Cloud",Intermediate,12,Cybersecurity / DevOps,"Security, Technology",Remote,Ohrid
+U040,Synthetic User 040,"Network Security, Linux, Penetration Testing","Cybersecurity, Cloud",Advanced,15,Cybersecurity / DevOps,"Security, Technology",Hybrid,Gostivar

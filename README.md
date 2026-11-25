@@ -1,179 +1,328 @@
-# CoFound – Collaborator Matching Platform
+# CoFound – AI Project & Collaborator Matching Platform
 
 **Student:** Emilija Mitevska  
 **Student ID:** 131766  
-**Course:** Introduction to Artificial Intelligence
+**Course:** Introduction to Artificial Intelligence  
 
 ## 1. Project Overview
 
-CoFound is an AI-powered platform designed to help people find suitable collaborators for their projects.
+CoFound is an AI-powered web platform designed to help people find suitable collaborators for their projects.
 
-The system compares project requirements with user profiles and recommends collaborators based on their skills, interests, and availability.
+The system analyzes project requirements and user profiles to recommend potential collaborators based on their skills, interests, experience, availability, preferred roles, and collaboration preferences.
 
-The current version is a Python recommendation prototype. The complete web platform will be developed in later stages.
+CoFound combines content-based recommendation techniques with mandatory eligibility filters to provide more suitable and reliable recommendations.
 
 ## 2. Problem Description
 
-Finding the right collaborators can be difficult, especially when people need specific technical skills or experience.
+Finding suitable collaborators can be difficult, especially when a project requires specific technical skills, professional experience, and time commitment.
 
-CoFound aims to simplify this process by automatically identifying users whose profiles match a project's requirements.
+CoFound aims to simplify this process by automatically identifying and ranking candidates whose profiles match project requirements.
 
-The platform is intended for students, developers, designers, entrepreneurs, freelancers, and other people interested in collaborating on projects.
+The platform is intended for students, developers, designers, entrepreneurs, freelancers, and other professionals interested in project collaboration.
 
-## 3. AI Techniques
+## 3. Main Features
 
-The recommendation system uses a content-based matching approach.
+The current web application includes:
 
-**TF-IDF (Term Frequency–Inverse Document Frequency)**
+- Overview dashboard with dataset statistics.
+- Community page for browsing and filtering user profiles.
+- Creation of new user profiles.
+- Project browsing and category filtering.
+- Creation of new projects.
+- AI-powered collaborator recommendations.
+- Individual matching scores and explanations.
+- Mandatory eligibility validation.
+- Experience displayed in years-based ranges.
+- Feedback when no suitable collaborators are available.
 
-Converts project descriptions, required skills, and user profile information into numerical vectors.
+The application currently uses CSV-based data storage.
 
-**Cosine Similarity**
+## 4. AI Methodology
 
-Measures the similarity between a project's text and each candidate's profile.
+CoFound uses a content-based recommendation approach.
 
-**Skill Matching**
+### TF-IDF
 
-Calculates the percentage of required project skills that a candidate possesses.
+Term Frequency–Inverse Document Frequency converts project descriptions, required skills, and user profile information into numerical vectors.
 
-**Weighted Ranking**
+### Cosine Similarity
 
-Combines text similarity, skill matching, interest matching, and availability into a final matching score.
+Measures textual similarity between project requirements and candidate profiles.
 
-The current scoring formula is:
+### Weighted Matching
 
-Final Score = 0.50 × Text Similarity + 0.30 × Skill Match + 0.10 × Interest Match + 0.10 × Availability Match
+The final matching score combines seven factors:
 
-These weights are initial design choices and have not yet been optimized through evaluation.
+| Matching Factor | Weight |
+|---|---:|
+| Text similarity | 30% |
+| Skill matching | 25% |
+| Interest matching | 10% |
+| Availability matching | 10% |
+| Role matching | 10% |
+| Experience matching | 10% |
+| Collaboration preference | 5% |
+| Total | 100% |
 
-## 4. Technologies Used
+Final Score = 100 × (0.30 × Text Similarity + 0.25 × Skill Match + 0.10 × Interest Match + 0.10 × Availability Match + 0.10 × Role Match + 0.10 × Experience Match + 0.05 × Collaboration Match)
+
+The weights are manually defined rather than learned through model training.
+
+### Mandatory Eligibility Filters
+
+Before a candidate can be recommended, they must:
+
+- Match at least two required skills, or all required skills if fewer than two are specified.
+- Meet the minimum experience requirement.
+- Have sufficient weekly availability.
+
+Eligible candidates are ranked according to their final matching scores.
+
+The system returns up to three recommendations per project. If no eligible candidates are available, the system displays an appropriate message.
+
+Matching scores represent weighted compatibility scores, not probabilities of successful collaboration.
+
+## 5. Dataset
+
+The dataset was progressively expanded during development.
+
+| Development Stage | Users | Projects |
+|---|---:|---:|
+| Initial prototype | 5 | 2 |
+| Expanded prototype | 40 | 10 |
+| Current version | 200 | 30 |
+
+The current dataset contains 6,000 possible user–project combinations.
+
+### User Profiles
+
+File: `data/user_profiles.csv`
+
+Each user profile includes:
+
+- User ID and name
+- Skills and interests
+- Experience level
+- Weekly availability
+- Preferred professional role
+- Preferred project types
+- Collaboration mode
+- Location
+
+### Projects
+
+File: `data/projects.csv`
+
+Each project includes:
+
+- Project ID and title
+- Project description
+- Required skills
+- Project category
+- Required professional role
+- Minimum experience
+- Required weekly availability
+- Collaboration mode
+- Location
+
+The dataset contains synthetic profiles and projects created for development, testing, and experimental evaluation.
+
+## 6. Experimental Evaluation
+
+Three recommendation methods were compared using the same dataset and evaluation criteria.
+
+- Baseline: Simple skill-overlap matching.
+- Original AI: TF-IDF, cosine similarity, and weighted ranking.
+- Improved AI: Weighted ranking with mandatory eligibility filters.
+
+The evaluation dataset contains 178 eligible and 5,822 ineligible user–project combinations.
+
+### Evaluation Results
+
+| Metric | Baseline | Original AI | Improved AI |
+|---|---:|---:|---:|
+| Precision@3 | 0.389 | 0.533 | 0.767 |
+| Recall@3 | 0.343 | 0.503 | 0.688 |
+| MRR | 0.500 | 0.717 | 0.967 |
+| NDCG@3 | 0.450 | 0.657 | 1.000 |
+| Recommendation validity | 38.89% | 53.33% | 100% |
+| Project coverage | 100% | 100% | 96.67% |
+
+### Recommendation Quality
+
+| Result | Baseline | Original AI | Improved AI |
+|---|---:|---:|---:|
+| Total recommendations | 90 | 90 | 69 |
+| Valid recommendations | 35 | 48 | 69 |
+| Invalid recommendations | 55 | 42 | 0 |
+| Projects covered | 30 | 30 | 29 |
+
+The improved method increased recommendation validity and eliminated invalid recommendations under the defined eligibility criteria.
+
+Evaluation labels are generated using predefined eligibility rules. Therefore, these results measure eligibility compliance rather than independently verified real-world recommendation quality.
+
+## 7. Error Analysis
+
+| Error Type | Baseline | Original AI | Improved AI |
+|---|---:|---:|---:|
+| Insufficient skills | 0 | 1 | 0 |
+| Insufficient experience | 25 | 11 | 0 |
+| Insufficient availability | 52 | 35 | 0 |
+| Total invalid recommendations | 55 | 42 | 0 |
+
+Insufficient availability was the most common reason for invalid recommendations.
+
+Individual error counts may overlap because a candidate can fail multiple requirements.
+
+Detailed experimental results are stored in the `data` and `experiments` folders.
+
+## 8. Technologies Used
 
 - Python
 - Pandas
 - NumPy
 - Scikit-learn
-- Google Sheets (dataset preparation)
+- Streamlit
+- HTML and CSS
+- CSV data storage
+- Google Sheets
 - Visual Studio Code
 - Git and GitHub
 
-## 5. Dataset
+## 9. Project Structure
 
-The current prototype uses a small fictional dataset created in Google Sheets.
+    CoFound/
+    ├── assets/
+    │   ├── logo.svg
+    │   └── styles.css
+    ├── .streamlit/
+    │   └── config.toml
+    ├── data/
+    │   ├── user_profiles.csv
+    │   ├── projects.csv
+    │   ├── evaluation_labels.csv
+    │   └── comparison_results.csv
+    ├── experiments/
+    │   ├── experiment_summary.csv
+    │   ├── recommendation_quality.csv
+    │   ├── error_analysis.csv
+    │   └── error_summary.csv
+    ├── docs/
+    │   └── test_log.csv
+    ├── app.py
+    ├── matching.py
+    ├── baseline.py
+    ├── generate_dataset.py
+    ├── create_evaluation.py
+    ├── compare_methods.py
+    ├── error_analysis.py
+    ├── requirements.txt
+    └── README.md
 
-**User Profiles (`data/user_profiles.csv`)**
+The structure above shows the main project files and folders.
 
-Contains five example users with the following information:
+## 10. Installation and Execution
 
-- User ID and name
-- Skills
-- Interests
-- Experience level
-- Availability in hours per week
+### Step 1 – Clone the Repository
 
-**Projects (`data/projects.csv`)**
+```powershell
+git clone https://github.com/emitevska/CoFound.git
+cd CoFound
+```
 
-Contains two example projects:
+### Step 2 – Install Dependencies
 
-- **FitTrack:** A mobile fitness application requiring React Native, UI/UX, and Firebase.
-- **SmartStudy:** An AI study application requiring Python, Machine Learning, and Flask.
-
-The dataset is intended for demonstrating the matching process. It is not a real-world dataset or sufficient for reliable performance evaluation.
-
-## 6. Current Implementation
-
-The Python program in `matching.py`:
-
-1. Loads the user and project datasets.
-2. Prepares project and user profile text.
-3. Applies TF-IDF vectorization.
-4. Calculates cosine similarity.
-5. Calculates separate skill, interest, and availability scores.
-6. Combines the scores using weighted ranking.
-7. Filters candidates with no text similarity or required-skill overlap.
-8. Displays up to three recommended collaborators for each project.
-
-Experience level is displayed but is not yet included in the final score.
-
-The current availability calculation assumes that 10 hours per week is sufficient for a full availability score. Interest matching uses exact category overlap.
-
-## 7. How to Run the Project
-
-**Step 1 – Install Python**
-
-Make sure Python is installed on your computer.
-
-**Step 2 – Install dependencies**
-
-Open a terminal inside the project folder and run:
+Make sure Python is installed.
 
 ```powershell
 py -m pip install -r requirements.txt
 ```
 
-**Step 3 – Run the recommendation algorithm**
+### Step 3 – Run the Web Application
+
+```powershell
+py -m streamlit run app.py
+```
+
+The application will open in a web browser.
+
+### Run the Matching Algorithm
 
 ```powershell
 py matching.py
 ```
 
-The program will display recommendations for FitTrack and SmartStudy.
+### Reproduce the Experimental Evaluation
+
+Using the original evaluation dataset of 200 users and 30 projects, run:
+
+```powershell
+py create_evaluation.py
+py compare_methods.py
+py error_analysis.py
+```
+
+These scripts regenerate the evaluation labels, comparison results, and error analysis.
 
 On systems where the `py` launcher is unavailable, use `python` instead.
 
-## 8. Current Recommendation Results
+## 11. Testing and Evidence
 
-The following results were generated by the current Python prototype.
+Basic functional testing was performed for:
 
-### Project 1 – FitTrack
+- User profile creation.
+- Project creation.
+- Input validation.
+- Profile and project search.
+- Filtering functionality.
+- AI recommendation generation.
+- Mandatory eligibility filters.
+- No-match scenarios.
+- Data persistence after refreshing the application.
 
-| Rank | Collaborator | Final Score | Skill Match |
-|---|---|---|---|
-| 1 | Marko | 49.08/100 | 66.67% |
-| 2 | Elena | 32.63/100 | 33.33% |
+The test results are documented in `docs/test_log.csv`.
 
-Only two candidates passed the current matching filter.
+Temporary test profiles and projects were removed by restoring the original evaluation dataset after testing.
 
-### Project 2 – SmartStudy
+Full system verification will be performed during the final development stage.
 
-| Rank | Collaborator | Final Score | Skill Match |
-|---|---|---|---|
-| 1 | Ana | 63.55/100 | 100% |
+## 12. Current Limitations
 
-Only one candidate passed the current matching filter.
+- The dataset contains synthetic rather than real-world profiles.
+- Evaluation labels are based on predefined eligibility rules.
+- Matching weights are manually selected.
+- Skill matching relies on exact normalized skill names.
+- Experience is represented through categories displayed as years-based ranges.
+- Location is stored but is not currently included in the matching score.
+- The application currently uses CSV files instead of a database.
+- User authentication and individual account management are not yet implemented.
+- Independent human evaluation is still required.
 
-These scores represent weighted matching scores, not probabilities or measured recommendation accuracy.
+## 13. Ethical Considerations
 
-## 9. Evidence
+CoFound is designed to support human decision-making rather than automatically select collaborators.
 
-The `evidence` folder contains screenshots of:
+The application provides matching scores and explanations to help users understand the recommendations.
 
-- The user profiles dataset.
-- The projects dataset.
-- The TF-IDF and cosine similarity implementation.
-- FitTrack recommendation results.
-- SmartStudy recommendation results.
+Synthetic data is used during development and evaluation to reduce privacy risks. Recommendations do not guarantee successful collaboration, and the final decision remains with the user.
 
-## 10. Current Limitations
-
-- The dataset contains only five fictional users and two projects.
-- Interest matching is based on exact category overlap.
-- Availability uses a fixed assumption rather than project-specific time requirements.
-- The matching weights have not been optimized.
-- Recommendation quality has not yet been formally evaluated.
-- The web interface and database have not yet been implemented.
-
-## 11. Next Steps
+## 14. Next Steps
 
 The next development objectives are:
 
-1. Improve interest and availability matching.
-2. Expand the sample dataset.
-3. Compare the AI algorithm with a basic keyword-matching baseline.
-4. Evaluate recommendations using manually labeled relevant matches and Precision@3.
-5. Begin developing the CoFound web application.
+1. Implement user registration and login.
+2. Integrate an SQLite database.
+3. Introduce personal profile management.
+4. Introduce personal project management.
+5. Improve application security and access control.
+6. Refactor and improve the application code.
+7. Conduct additional recommendation validation.
+8. Improve the user interface and overall usability.
 
-## 12. Project Status
+## 15. Project Status
 
-**Current stage:** Working AI recommendation prototype.
+**Current stage:** Functional AI-powered web application prototype.
 
-The dataset, Python implementation, and initial recommendation results are complete. The full web application and formal evaluation remain future development tasks.
+The expanded dataset, improved recommendation algorithm, web interface, experimental evaluation, error analysis, and basic functional testing are completed.
+
+Authentication, database integration, additional validation, and final system verification remain planned for the next development stages.

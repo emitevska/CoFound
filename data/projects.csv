@@ -9,3 +9,23 @@ P007,HealthAI,AI application for analyzing health and fitness information,"Pytho
 P008,DesignHub,Collaborative platform for creating and sharing UI designs,"Figma, UI/UX, Prototyping",Design,UI/UX Designer,Intermediate,10,Remote,Tetovo
 P009,CloudDeploy,Cloud deployment and automation platform,"Docker, Kubernetes, CI/CD",Cloud Computing,Cybersecurity / DevOps,Advanced,12,Remote,Skopje
 P010,BookFlow,Backend system for managing online book reservations,"Java, Spring Boot, SQL",Web Development,Backend Developer,Intermediate,10,Hybrid,Gostivar
+P011,EcoTrack,Application for tracking personal carbon emissions,"Python, Pandas, SQL",Data Science,Data Scientist,Intermediate,10,Remote,Tetovo
+P012,StudyBuddy,AI assistant for organizing learning materials,"Python, NLP, Scikit-learn",Education & AI,AI Developer,Intermediate,20,Remote,Prilep
+P013,MarketPlace,Online marketplace for local businesses,"React, JavaScript, CSS",E-commerce,Frontend Developer,Intermediate,20,On-site,Tetovo
+P014,TaskFlow,Backend service for managing team tasks,"Python, FastAPI, SQL",Web Development,Backend Developer,Intermediate,10,On-site,Ohrid
+P015,FoodFinder,Mobile application for discovering restaurants,"Flutter, Dart, Firebase",Mobile Apps,Mobile Developer,Intermediate,15,Remote,Prilep
+P016,CreativeSpace,Collaborative design platform for creative teams,"Figma, UI/UX, Prototyping",Design,UI/UX Designer,Beginner,20,Remote,Skopje
+P017,FinanceLens,Financial analytics and reporting dashboard,"Python, SQL, Power BI",Finance,Data Scientist,Beginner,12,Remote,Bitola
+P018,ThreatGuard,System for detecting network security risks,"Cybersecurity, Network Security, Python",Cybersecurity,Cybersecurity / DevOps,Intermediate,8,Remote,Struga
+P019,CloudSync,Automated cloud infrastructure management system,"AWS, Terraform, Linux",Cloud Computing,Cybersecurity / DevOps,Advanced,20,Hybrid,Bitola
+P020,VisionAI,Image recognition application using computer vision,"Python, Computer Vision, OpenCV",AI,AI Developer,Intermediate,15,Remote,Struga
+P021,EventConnect,Responsive website for discovering local events,"React, Next.js, TypeScript",Web Development,Frontend Developer,Intermediate,10,On-site,Struga
+P022,MedRecord,Backend system for managing healthcare records,"Java, Spring Boot, SQL",Health Tech,Backend Developer,Advanced,10,Hybrid,Gostivar
+P023,HabitHero,Mobile application for tracking daily habits,"Kotlin, Android, Firebase",Health & Fitness,Mobile Developer,Intermediate,8,On-site,Gostivar
+P024,AccessibleWeb,Accessible interface design for online services,"Figma, UI/UX, Accessibility",Design,UI/UX Designer,Intermediate,8,On-site,Gostivar
+P025,SalesInsight,Application for analyzing customer sales trends,"Python, Pandas, Tableau",Business,Data Scientist,Advanced,20,Remote,Struga
+P026,ChatAssist,Intelligent chatbot for answering customer questions,"Python, NLP, PyTorch",AI,AI Developer,Intermediate,10,Hybrid,Gostivar
+P027,DevPipeline,Automated software testing and deployment pipeline,"Docker, Kubernetes, CI/CD",Cloud Computing,Cybersecurity / DevOps,Intermediate,15,Hybrid,Prilep
+P028,PortfolioHub,Website for showcasing professional portfolios,"HTML, CSS, JavaScript",Web Development,Frontend Developer,Advanced,12,Hybrid,Bitola
+P029,QuickReserve,Backend platform for managing online reservations,"Node.js, Express, MongoDB",Business,Backend Developer,Intermediate,10,On-site,Skopje
+P030,CityExplorer,Mobile travel guide for discovering city attractions,"React Native, JavaScript, Firebase",Travel,Mobile Developer,Intermediate,12,Hybrid,Struga

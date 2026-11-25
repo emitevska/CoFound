@@ -1,0 +1,4 @@
+Method,Total recommendations,Valid recommendations,Invalid recommendations,Validity (%),Projects covered,Coverage (%)
+Baseline,90,35,55,38.8889,30,100.0
+Original AI,90,48,42,53.3333,30,100.0
+Improved AI,69,69,0,100.0,29,96.6667

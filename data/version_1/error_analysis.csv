@@ -1,0 +1,40 @@
+project_id,project,method,rank,user_id,candidate,error_reasons
+P001,FitTrack,Baseline,3,U001,Elena,Not enough matching skills
+P001,FitTrack,AI Matching,3,U023,Synthetic User 023,Not enough matching skills
+P002,SmartStudy,Baseline,3,U006,Synthetic User 006,Experience below requirement; Not enough available hours
+P002,SmartStudy,AI Matching,3,U009,Synthetic User 009,Not enough matching skills
+P003,ShopEase,Baseline,1,U012,Synthetic User 012,Not enough available hours
+P003,ShopEase,Baseline,2,U005,Marija,Experience below requirement
+P003,ShopEase,Baseline,3,U011,Synthetic User 011,Experience below requirement; Not enough available hours
+P003,ShopEase,AI Matching,1,U012,Synthetic User 012,Not enough available hours
+P003,ShopEase,AI Matching,2,U005,Marija,Experience below requirement
+P003,ShopEase,AI Matching,3,U014,Synthetic User 014,Not enough matching skills
+P004,SecureNet,Baseline,1,U037,Synthetic User 037,Experience below requirement; Not enough available hours
+P004,SecureNet,Baseline,2,U003,Ana,Not enough matching skills; Experience below requirement; Not enough available hours
+P004,SecureNet,Baseline,3,U006,Synthetic User 006,Not enough matching skills; Experience below requirement; Not enough available hours
+P004,SecureNet,AI Matching,1,U037,Synthetic User 037,Experience below requirement; Not enough available hours
+P004,SecureNet,AI Matching,2,U040,Synthetic User 040,Not enough matching skills
+P004,SecureNet,AI Matching,3,U038,Synthetic User 038,Not enough matching skills; Not enough available hours
+P005,DataVision,Baseline,1,U031,Synthetic User 031,Experience below requirement; Not enough available hours
+P005,DataVision,AI Matching,1,U031,Synthetic User 031,Experience below requirement; Not enough available hours
+P006,TravelMate,Baseline,2,U002,Marko,Not enough matching skills
+P006,TravelMate,Baseline,3,U021,Synthetic User 021,Not enough matching skills; Not enough available hours
+P006,TravelMate,AI Matching,2,U024,Synthetic User 024,Not enough matching skills
+P006,TravelMate,AI Matching,3,U021,Synthetic User 021,Not enough matching skills; Not enough available hours
+P007,HealthAI,Baseline,1,U006,Synthetic User 006,Experience below requirement; Not enough available hours
+P007,HealthAI,Baseline,2,U003,Ana,Experience below requirement; Not enough available hours
+P007,HealthAI,AI Matching,2,U006,Synthetic User 006,Experience below requirement; Not enough available hours
+P007,HealthAI,AI Matching,3,U008,Synthetic User 008,Not enough matching skills; Not enough available hours
+P008,DesignHub,Baseline,1,U026,Synthetic User 026,Experience below requirement; Not enough available hours
+P008,DesignHub,AI Matching,2,U026,Synthetic User 026,Experience below requirement; Not enough available hours
+P009,CloudDeploy,Baseline,1,U038,Synthetic User 038,Not enough available hours
+P009,CloudDeploy,Baseline,2,U036,Synthetic User 036,Not enough matching skills; Experience below requirement; Not enough available hours
+P009,CloudDeploy,AI Matching,1,U038,Synthetic User 038,Not enough available hours
+P009,CloudDeploy,AI Matching,2,U036,Synthetic User 036,Not enough matching skills; Experience below requirement; Not enough available hours
+P009,CloudDeploy,AI Matching,3,U040,Synthetic User 040,Not enough matching skills
+P010,BookFlow,Baseline,1,U004,Stefan,Not enough available hours
+P010,BookFlow,Baseline,2,U017,Synthetic User 017,Not enough available hours
+P010,BookFlow,Baseline,3,U019,Synthetic User 019,Not enough matching skills
+P010,BookFlow,AI Matching,1,U017,Synthetic User 017,Not enough available hours
+P010,BookFlow,AI Matching,2,U004,Stefan,Not enough available hours
+P010,BookFlow,AI Matching,3,U019,Synthetic User 019,Not enough matching skills

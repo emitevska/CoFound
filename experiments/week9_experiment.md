@@ -8,8 +8,7 @@ collaborator matching algorithm with a simple baseline
 and check which method recommends better candidates.
 
 ## 2. Dataset
-
-We used a synthetic dataset containing:
+I used a synthetic dataset containing:
 - 40 user profiles
 - 10 projects
 - 400 project-user combinations

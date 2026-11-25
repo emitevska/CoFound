@@ -1,0 +1,913 @@
+/* ==========================================
+   1. COFOUND DESIGN SYSTEM
+   ========================================== */
+
+:root {
+    --primary: #6D4AFF;
+    --primary-hover: #5838E0;
+    --primary-light: #EDE9FE;
+    --background: #F7F8FC;
+    --surface: #FFFFFF;
+    --text-primary: #1E1B35;
+    --text-secondary: #6B687E;
+    --text-muted: #9693A8;
+    --border: #E5E4ED;
+    --success: #16A34A;
+    --success-light: #ECFDF3;
+    --shadow: 0 4px 20px rgba(30, 27, 53, 0.04);
+    --radius: 16px;
+}
+
+
+/* ==========================================
+   2. GLOBAL APPLICATION STYLING
+   ========================================== */
+
+.stApp {
+    background-color: var(--background);
+    color: var(--text-primary);
+    font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+[data-testid="stHeader"] {
+    background: transparent;
+}
+
+[data-testid="stMainBlockContainer"] {
+    max-width: 1450px;
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+.stAppDeployButton {
+    display: none;
+}
+
+
+/* ==========================================
+   3. TYPOGRAPHY
+   ========================================== */
+
+h1, h2, h3, h4 {
+    color: var(--text-primary) !important;
+    font-family: "Inter", "Segoe UI", sans-serif;
+    letter-spacing: -0.7px;
+}
+
+h1 {
+    font-size: 2.2rem !important;
+    font-weight: 750 !important;
+}
+
+h2 {
+    font-size: 1.5rem !important;
+    font-weight: 650 !important;
+}
+
+h3 {
+    font-size: 1.15rem !important;
+    font-weight: 650 !important;
+}
+
+p {
+    line-height: 1.65;
+}
+
+[data-testid="stCaptionContainer"] {
+    color: var(--text-muted);
+}
+
+.page-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.page-description {
+    color: var(--text-secondary);
+    font-size: 15px;
+    margin-bottom: 24px;
+}
+
+
+/* ==========================================
+   4. SIDEBAR
+   ========================================== */
+
+[data-testid="stSidebar"] {
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+    min-width: 250px;
+}
+
+[data-testid="stSidebarContent"] {
+    padding-top: 20px;
+}
+
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3,
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] label {
+    color: var(--text-primary);
+}
+
+[data-testid="stSidebar"] hr {
+    border-color: var(--border);
+    margin: 18px 0;
+}
+
+.sidebar-section {
+    color: var(--text-muted);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    margin: 22px 0 10px;
+}
+
+
+/* ==========================================
+   5. SIDEBAR NAVIGATION BUTTONS
+   ========================================== */
+
+[data-testid="stSidebar"] .stButton > button {
+    width: 100%;
+    justify-content: flex-start;
+    text-align: left;
+    background: transparent;
+    color: var(--text-secondary);
+    border: none;
+    box-shadow: none;
+    border-radius: 9px;
+    min-height: 44px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+[data-testid="stSidebar"] .stButton > button:hover {
+    background: #F3F0FF;
+    color: var(--primary);
+}
+
+[data-testid="stSidebar"] button[kind="primary"] {
+    background: var(--primary-light);
+    color: var(--primary);
+    font-weight: 650;
+}
+
+.sidebar-summary {
+    background: linear-gradient(
+        145deg,
+        #F3EFFF,
+        #F8F6FF
+    );
+    padding: 18px;
+    border-radius: 14px;
+    margin-top: 20px;
+}
+
+.sidebar-summary-title {
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.sidebar-summary-text {
+    color: var(--text-secondary);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+
+/* ==========================================
+   6. HOME HERO SECTION
+   ========================================== */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+        120deg,
+        #EDE9FE 0%,
+        #E8E4FF 50%,
+        #DBEAFE 100%
+    );
+    border: 1px solid #E4DFFF;
+    padding: 42px;
+    border-radius: 22px;
+    margin-bottom: 24px;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    right: -65px;
+    top: -100px;
+    width: 320px;
+    height: 320px;
+    border: 45px solid rgba(109, 74, 255, 0.07);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.hero h1 {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+    font-size: 42px !important;
+    font-weight: 800 !important;
+    line-height: 1.15;
+    letter-spacing: -1.8px;
+    margin: 12px 0 18px;
+}
+
+.hero p {
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
+    color: #625878;
+    font-size: 16px;
+}
+
+.hero .eyebrow {
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.hero-highlight {
+    color: var(--primary);
+}
+
+
+/* ==========================================
+   7. BUTTONS
+   ========================================== */
+
+.stButton > button,
+.stFormSubmitButton > button {
+    border-radius: 10px;
+    padding: 10px 20px;
+    min-height: 42px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.stButton > button[kind="primary"],
+.stFormSubmitButton > button[kind="primary"] {
+    background: var(--primary);
+    color: white;
+    border: 1px solid var(--primary);
+    box-shadow: 0 4px 12px rgba(109, 74, 255, 0.15);
+}
+
+.stButton > button[kind="primary"]:hover,
+.stFormSubmitButton > button[kind="primary"]:hover {
+    background: var(--primary-hover);
+    border-color: var(--primary-hover);
+    color: white;
+}
+
+.stButton > button[kind="secondary"],
+.stFormSubmitButton > button[kind="secondary"] {
+    background: white;
+    color: var(--primary);
+    border: 1px solid #DDD6FE;
+}
+
+.stButton > button[kind="secondary"]:hover,
+.stFormSubmitButton > button[kind="secondary"]:hover {
+    background: var(--primary-light);
+    border-color: var(--primary);
+}
+
+
+/* ==========================================
+   8. STATISTIC CARDS
+   ========================================== */
+
+[data-testid="stMetric"] {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 22px;
+    box-shadow: var(--shadow);
+}
+
+[data-testid="stMetricLabel"] {
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+[data-testid="stMetricValue"] {
+    color: var(--text-primary);
+    font-size: 30px;
+    font-weight: 750;
+}
+
+.stat-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: var(--shadow);
+}
+
+.stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: var(--primary-light);
+    color: var(--primary);
+    border-radius: 12px;
+    font-size: 19px;
+    margin-bottom: 15px;
+}
+
+.stat-value {
+    font-size: 32px;
+    font-weight: 750;
+    letter-spacing: -1px;
+    color: var(--text-primary);
+}
+
+.stat-label {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-top: 4px;
+}
+
+
+/* ==========================================
+   9. GENERAL CONTENT CARDS
+   ========================================== */
+
+[data-testid="stVerticalBlockBorderWrapper"],
+[data-testid="stVerticalBlock"][height] {
+    border-radius: var(--radius);
+}
+
+[data-testid="stVerticalBlockBorderWrapper"] {
+    background: var(--surface);
+    border-color: var(--border);
+    box-shadow: var(--shadow);
+}
+
+.content-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: var(--shadow);
+    margin-bottom: 16px;
+}
+
+.section-title {
+    color: var(--text-primary);
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+}
+
+.section-description {
+    color: var(--text-secondary);
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+
+/* ==========================================
+   10. PROJECT CARDS
+   ========================================== */
+
+.project-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: var(--shadow);
+    min-height: 245px;
+    transition: all 0.2s ease;
+}
+
+.project-card:hover {
+    border-color: #CFC3FF;
+    box-shadow: 0 6px 24px rgba(109, 74, 255, 0.08);
+}
+
+.project-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.project-icon {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-light);
+    color: var(--primary);
+    border-radius: 12px;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.project-title {
+    color: var(--text-primary);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+}
+
+.project-category {
+    color: var(--text-muted);
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.project-description {
+    color: var(--text-secondary);
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.project-meta {
+    color: var(--text-secondary);
+    font-size: 12px;
+    line-height: 1.8;
+    margin-top: 12px;
+}
+
+
+/* ==========================================
+   11. SKILL TAGS
+   ========================================== */
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 12px 0;
+}
+
+.skill-tag {
+    display: inline-block;
+    background: #F1EDFF;
+    color: #6543C7;
+    border: 1px solid #E9E2FF;
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-size: 11px;
+    font-weight: 550;
+}
+
+.skill-tag.matched {
+    background: #ECFDF3;
+    color: #15803D;
+    border-color: #D1FAE5;
+}
+
+.skill-tag.missing {
+    background: #FFF7ED;
+    color: #C2410C;
+    border-color: #FFEDD5;
+}
+
+
+/* ==========================================
+   12. USER PROFILE CARDS
+   ========================================== */
+
+.profile-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: var(--shadow);
+    min-height: 240px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 15px;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: linear-gradient(
+        135deg,
+        #E9D5FF,
+        #DDD6FE
+    );
+    color: #6D4AFF;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.profile-name {
+    color: var(--text-primary);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.profile-role {
+    color: var(--text-secondary);
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.profile-meta {
+    color: var(--text-secondary);
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+
+/* ==========================================
+   13. AI RECOMMENDATION CARDS
+   ========================================== */
+
+.recommendation-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: var(--shadow);
+    min-height: 300px;
+}
+
+.recommendation-card:hover {
+    border-color: #CFC3FF;
+}
+
+.recommendation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.rank-label {
+    color: var(--primary);
+    background: var(--primary-light);
+    padding: 5px 9px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.match-label {
+    color: var(--text-muted);
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+
+/* ==========================================
+   14. CIRCULAR AI MATCH SCORE
+   ========================================== */
+
+.score-ring {
+    width: 78px;
+    height: 78px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: conic-gradient(
+        var(--primary) calc(var(--score) * 1%),
+        #EDE9FE 0
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.score-inner {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.score-number {
+    color: var(--primary);
+    font-size: 20px;
+    font-weight: 750;
+    line-height: 1.1;
+}
+
+.score-caption {
+    color: var(--text-muted);
+    font-size: 9px;
+    margin-top: 3px;
+}
+
+
+/* ==========================================
+   15. ELIGIBILITY AND STATUS LABELS
+   ========================================== */
+
+.eligible-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--success-light);
+    color: var(--success);
+    border-radius: 7px;
+    padding: 7px 10px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-top: 12px;
+}
+
+.category-label {
+    display: inline-block;
+    background: var(--primary-light);
+    color: var(--primary);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.requirement-box {
+    background: #F3F0FF;
+    border: 1px solid #E4DCFF;
+    border-radius: 12px;
+    padding: 16px 20px;
+    color: #6543C7;
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 15px 0;
+}
+
+
+/* ==========================================
+   16. INPUTS AND FORMS
+   ========================================== */
+
+[data-testid="stTextInput"] input,
+[data-testid="stNumberInput"] input,
+[data-testid="stTextArea"] textarea {
+    background: white;
+    color: var(--text-primary);
+    border-radius: 9px;
+    font-size: 14px;
+}
+
+[data-baseweb="input"],
+[data-baseweb="textarea"],
+[data-baseweb="select"] > div {
+    background: white;
+    border-color: var(--border);
+    border-radius: 9px;
+}
+
+[data-baseweb="select"] > div:hover {
+    border-color: #B7A5FF;
+}
+
+[data-testid="stWidgetLabel"] p {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+[data-testid="stForm"] {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: var(--shadow);
+}
+
+[data-baseweb="tag"] {
+    background: var(--primary-light);
+    color: var(--primary);
+    border-radius: 6px;
+}
+
+
+/* ==========================================
+   17. TABS
+   ========================================== */
+
+[data-baseweb="tab-list"] {
+    gap: 8px;
+    border-bottom: 1px solid var(--border);
+}
+
+[data-baseweb="tab"] {
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 550;
+    color: var(--text-secondary);
+}
+
+[data-baseweb="tab"][aria-selected="true"] {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+[data-baseweb="tab-highlight"] {
+    background-color: var(--primary);
+}
+
+
+/* ==========================================
+   18. DATA TABLES AND EXPANDERS
+   ========================================== */
+
+[data-testid="stDataFrame"] {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+[data-testid="stExpander"] {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+[data-testid="stExpander"] summary {
+    font-size: 13px;
+    font-weight: 550;
+}
+
+
+/* ==========================================
+   19. PROGRESS BARS
+   ========================================== */
+
+[data-testid="stProgress"] > div > div {
+    background-color: #EDE9FE;
+    border-radius: 20px;
+}
+
+[data-testid="stProgress"] > div > div > div {
+    background-color: var(--primary);
+    border-radius: 20px;
+}
+
+
+/* ==========================================
+   20. DIVIDERS AND NOTIFICATIONS
+   ========================================== */
+
+hr {
+    border-color: var(--border);
+    margin: 24px 0;
+}
+
+[data-testid="stAlert"] {
+    border-radius: 12px;
+}
+
+
+/* ==========================================
+   21. EMPTY RESULTS
+   ========================================== */
+
+.empty-state {
+    background: white;
+    border: 1px dashed #D8D2E8;
+    border-radius: 18px;
+    padding: 45px 24px;
+    text-align: center;
+}
+
+.empty-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-light);
+    color: var(--primary);
+    border-radius: 18px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+}
+
+.empty-title {
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.empty-description {
+    font-size: 14px;
+    color: var(--text-secondary);
+    max-width: 440px;
+    margin: 10px auto 0;
+}
+
+
+/* ==========================================
+   22. FOOTER
+   ========================================== */
+
+.footer {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 11px;
+    line-height: 1.8;
+    padding-top: 30px;
+    margin-top: 40px;
+    border-top: 1px solid var(--border);
+}
+
+
+/* ==========================================
+   23. RESPONSIVE DESIGN
+   ========================================== */
+
+@media screen and (max-width: 900px) {
+
+    [data-testid="stMainBlockContainer"] {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .hero {
+        padding: 28px;
+    }
+
+    .hero h1 {
+        font-size: 32px !important;
+    }
+
+    .project-card,
+    .profile-card,
+    .recommendation-card {
+        padding: 18px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    [data-testid="stMainBlockContainer"] {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .hero {
+        padding: 24px;
+    }
+
+    .hero h1 {
+        font-size: 27px !important;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.8rem !important;
+    }
+}

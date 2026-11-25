@@ -1,40 +1,98 @@
-project_id,project,method,rank,user_id,candidate,error_reasons
-P001,FitTrack,Baseline,3,U001,Elena,Not enough matching skills
-P001,FitTrack,AI Matching,3,U023,Synthetic User 023,Not enough matching skills
-P002,SmartStudy,Baseline,3,U006,Synthetic User 006,Experience below requirement; Not enough available hours
-P002,SmartStudy,AI Matching,3,U009,Synthetic User 009,Not enough matching skills
-P003,ShopEase,Baseline,1,U012,Synthetic User 012,Not enough available hours
-P003,ShopEase,Baseline,2,U005,Marija,Experience below requirement
-P003,ShopEase,Baseline,3,U011,Synthetic User 011,Experience below requirement; Not enough available hours
-P003,ShopEase,AI Matching,1,U012,Synthetic User 012,Not enough available hours
-P003,ShopEase,AI Matching,2,U005,Marija,Experience below requirement
-P003,ShopEase,AI Matching,3,U014,Synthetic User 014,Not enough matching skills
-P004,SecureNet,Baseline,1,U037,Synthetic User 037,Experience below requirement; Not enough available hours
-P004,SecureNet,Baseline,2,U003,Ana,Not enough matching skills; Experience below requirement; Not enough available hours
-P004,SecureNet,Baseline,3,U006,Synthetic User 006,Not enough matching skills; Experience below requirement; Not enough available hours
-P004,SecureNet,AI Matching,1,U037,Synthetic User 037,Experience below requirement; Not enough available hours
-P004,SecureNet,AI Matching,2,U040,Synthetic User 040,Not enough matching skills
-P004,SecureNet,AI Matching,3,U038,Synthetic User 038,Not enough matching skills; Not enough available hours
-P005,DataVision,Baseline,1,U031,Synthetic User 031,Experience below requirement; Not enough available hours
-P005,DataVision,AI Matching,1,U031,Synthetic User 031,Experience below requirement; Not enough available hours
-P006,TravelMate,Baseline,2,U002,Marko,Not enough matching skills
-P006,TravelMate,Baseline,3,U021,Synthetic User 021,Not enough matching skills; Not enough available hours
-P006,TravelMate,AI Matching,2,U024,Synthetic User 024,Not enough matching skills
-P006,TravelMate,AI Matching,3,U021,Synthetic User 021,Not enough matching skills; Not enough available hours
-P007,HealthAI,Baseline,1,U006,Synthetic User 006,Experience below requirement; Not enough available hours
-P007,HealthAI,Baseline,2,U003,Ana,Experience below requirement; Not enough available hours
-P007,HealthAI,AI Matching,2,U006,Synthetic User 006,Experience below requirement; Not enough available hours
-P007,HealthAI,AI Matching,3,U008,Synthetic User 008,Not enough matching skills; Not enough available hours
-P008,DesignHub,Baseline,1,U026,Synthetic User 026,Experience below requirement; Not enough available hours
-P008,DesignHub,AI Matching,2,U026,Synthetic User 026,Experience below requirement; Not enough available hours
-P009,CloudDeploy,Baseline,1,U038,Synthetic User 038,Not enough available hours
-P009,CloudDeploy,Baseline,2,U036,Synthetic User 036,Not enough matching skills; Experience below requirement; Not enough available hours
-P009,CloudDeploy,AI Matching,1,U038,Synthetic User 038,Not enough available hours
-P009,CloudDeploy,AI Matching,2,U036,Synthetic User 036,Not enough matching skills; Experience below requirement; Not enough available hours
-P009,CloudDeploy,AI Matching,3,U040,Synthetic User 040,Not enough matching skills
-P010,BookFlow,Baseline,1,U004,Stefan,Not enough available hours
-P010,BookFlow,Baseline,2,U017,Synthetic User 017,Not enough available hours
-P010,BookFlow,Baseline,3,U019,Synthetic User 019,Not enough matching skills
-P010,BookFlow,AI Matching,1,U017,Synthetic User 017,Not enough available hours
-P010,BookFlow,AI Matching,2,U004,Stefan,Not enough available hours
-P010,BookFlow,AI Matching,3,U019,Synthetic User 019,Not enough matching skills
+project_id,project,method,rank,user_id,candidate,skills_failed,experience_failed,availability_failed,error_reasons
+P001,FitTrack,Baseline,1,U058,Synthetic User 058,0,0,1,Not enough available hours
+P001,FitTrack,Original AI,1,U058,Synthetic User 058,0,0,1,Not enough available hours
+P001,FitTrack,Original AI,2,U121,Synthetic User 121,0,0,1,Not enough available hours
+P002,SmartStudy,Baseline,3,U062,Synthetic User 062,0,0,1,Not enough available hours
+P002,SmartStudy,Original AI,2,U062,Synthetic User 062,0,0,1,Not enough available hours
+P003,ShopEase,Baseline,1,U012,Synthetic User 012,0,0,1,Not enough available hours
+P003,ShopEase,Baseline,3,U091,Synthetic User 091,0,0,1,Not enough available hours
+P003,ShopEase,Original AI,1,U091,Synthetic User 091,0,0,1,Not enough available hours
+P003,ShopEase,Original AI,3,U012,Synthetic User 012,0,0,1,Not enough available hours
+P004,SecureNet,Baseline,1,U037,Synthetic User 037,0,1,1,Experience below requirement; Not enough available hours
+P004,SecureNet,Baseline,2,U082,Synthetic User 082,0,1,1,Experience below requirement; Not enough available hours
+P004,SecureNet,Baseline,3,U089,Synthetic User 089,0,1,1,Experience below requirement; Not enough available hours
+P004,SecureNet,Original AI,1,U037,Synthetic User 037,0,1,1,Experience below requirement; Not enough available hours
+P004,SecureNet,Original AI,2,U082,Synthetic User 082,0,1,1,Experience below requirement; Not enough available hours
+P004,SecureNet,Original AI,3,U040,Synthetic User 040,1,0,0,Not enough matching skills
+P005,DataVision,Baseline,1,U031,Synthetic User 031,0,1,1,Experience below requirement; Not enough available hours
+P005,DataVision,Baseline,3,U081,Synthetic User 081,0,0,1,Not enough available hours
+P005,DataVision,Original AI,3,U088,Synthetic User 088,0,1,0,Experience below requirement
+P006,TravelMate,Baseline,3,U149,Synthetic User 149,0,0,1,Not enough available hours
+P006,TravelMate,Original AI,1,U198,Synthetic User 198,0,0,1,Not enough available hours
+P006,TravelMate,Original AI,2,U149,Synthetic User 149,0,0,1,Not enough available hours
+P007,HealthAI,Baseline,1,U006,Synthetic User 006,0,1,1,Experience below requirement; Not enough available hours
+P007,HealthAI,Baseline,2,U041,Synthetic User 041,0,1,1,Experience below requirement; Not enough available hours
+P007,HealthAI,Baseline,3,U069,Synthetic User 069,0,1,1,Experience below requirement; Not enough available hours
+P007,HealthAI,Original AI,3,U139,Synthetic User 139,0,1,0,Experience below requirement
+P008,DesignHub,Baseline,1,U026,Synthetic User 026,0,1,1,Experience below requirement; Not enough available hours
+P008,DesignHub,Baseline,2,U143,Synthetic User 143,0,1,0,Experience below requirement
+P009,CloudDeploy,Baseline,1,U038,Synthetic User 038,0,0,1,Not enough available hours
+P009,CloudDeploy,Baseline,3,U075,Synthetic User 075,0,1,1,Experience below requirement; Not enough available hours
+P009,CloudDeploy,Original AI,2,U038,Synthetic User 038,0,0,1,Not enough available hours
+P009,CloudDeploy,Original AI,3,U131,Synthetic User 131,0,1,0,Experience below requirement
+P010,BookFlow,Baseline,1,U004,Stefan,0,0,1,Not enough available hours
+P010,BookFlow,Baseline,2,U017,Synthetic User 017,0,0,1,Not enough available hours
+P010,BookFlow,Baseline,3,U057,Synthetic User 057,0,1,1,Experience below requirement; Not enough available hours
+P010,BookFlow,Original AI,1,U017,Synthetic User 017,0,0,1,Not enough available hours
+P011,EcoTrack,Baseline,1,U031,Synthetic User 031,0,1,1,Experience below requirement; Not enough available hours
+P011,EcoTrack,Baseline,3,U081,Synthetic User 081,0,0,1,Not enough available hours
+P011,EcoTrack,Original AI,3,U088,Synthetic User 088,0,1,0,Experience below requirement
+P012,StudyBuddy,Baseline,1,U007,Synthetic User 007,0,0,1,Not enough available hours
+P012,StudyBuddy,Baseline,3,U118,Synthetic User 118,0,1,1,Experience below requirement; Not enough available hours
+P012,StudyBuddy,Original AI,2,U195,Synthetic User 195,0,1,0,Experience below requirement
+P012,StudyBuddy,Original AI,3,U104,Synthetic User 104,0,0,1,Not enough available hours
+P013,MarketPlace,Baseline,1,U012,Synthetic User 012,0,0,1,Not enough available hours
+P013,MarketPlace,Baseline,2,U084,Synthetic User 084,0,0,1,Not enough available hours
+P013,MarketPlace,Baseline,3,U091,Synthetic User 091,0,0,1,Not enough available hours
+P013,MarketPlace,Original AI,1,U084,Synthetic User 084,0,0,1,Not enough available hours
+P013,MarketPlace,Original AI,2,U091,Synthetic User 091,0,0,1,Not enough available hours
+P013,MarketPlace,Original AI,3,U196,Synthetic User 196,0,0,1,Not enough available hours
+P014,TaskFlow,Baseline,3,U078,Synthetic User 078,0,0,1,Not enough available hours
+P014,TaskFlow,Original AI,3,U078,Synthetic User 078,0,0,1,Not enough available hours
+P015,FoodFinder,Baseline,1,U023,Synthetic User 023,0,0,1,Not enough available hours
+P015,FoodFinder,Baseline,3,U149,Synthetic User 149,0,0,1,Not enough available hours
+P015,FoodFinder,Original AI,1,U023,Synthetic User 023,0,0,1,Not enough available hours
+P015,FoodFinder,Original AI,2,U149,Synthetic User 149,0,0,1,Not enough available hours
+P015,FoodFinder,Original AI,3,U198,Synthetic User 198,0,0,1,Not enough available hours
+P016,CreativeSpace,Baseline,1,U026,Synthetic User 026,0,0,1,Not enough available hours
+P016,CreativeSpace,Original AI,2,U026,Synthetic User 026,0,0,1,Not enough available hours
+P017,FinanceLens,Baseline,2,U109,Synthetic User 109,0,0,1,Not enough available hours
+P018,ThreatGuard,Baseline,3,U089,Synthetic User 089,0,0,1,Not enough available hours
+P018,ThreatGuard,Original AI,3,U089,Synthetic User 089,0,0,1,Not enough available hours
+P019,CloudSync,Baseline,1,U039,Synthetic User 039,0,1,1,Experience below requirement; Not enough available hours
+P019,CloudSync,Baseline,2,U061,Synthetic User 061,0,1,1,Experience below requirement; Not enough available hours
+P019,CloudSync,Baseline,3,U068,Synthetic User 068,0,1,1,Experience below requirement; Not enough available hours
+P019,CloudSync,Original AI,1,U068,Synthetic User 068,0,1,1,Experience below requirement; Not enough available hours
+P019,CloudSync,Original AI,2,U061,Synthetic User 061,0,1,1,Experience below requirement; Not enough available hours
+P020,VisionAI,Baseline,1,U009,Synthetic User 009,0,0,1,Not enough available hours
+P020,VisionAI,Baseline,2,U048,Synthetic User 048,0,1,0,Experience below requirement
+P020,VisionAI,Original AI,2,U009,Synthetic User 009,0,0,1,Not enough available hours
+P020,VisionAI,Original AI,3,U167,Synthetic User 167,0,1,1,Experience below requirement; Not enough available hours
+P021,EventConnect,Baseline,2,U119,Synthetic User 119,0,0,1,Not enough available hours
+P022,MedRecord,Baseline,1,U004,Stefan,0,0,1,Not enough available hours
+P022,MedRecord,Baseline,2,U017,Synthetic User 017,0,1,1,Experience below requirement; Not enough available hours
+P022,MedRecord,Baseline,3,U057,Synthetic User 057,0,1,1,Experience below requirement; Not enough available hours
+P022,MedRecord,Original AI,1,U004,Stefan,0,0,1,Not enough available hours
+P022,MedRecord,Original AI,2,U071,Synthetic User 071,0,0,1,Not enough available hours
+P023,HabitHero,Baseline,1,U021,Synthetic User 021,0,1,1,Experience below requirement; Not enough available hours
+P024,AccessibleWeb,Baseline,1,U164,Synthetic User 164,0,0,1,Not enough available hours
+P024,AccessibleWeb,Baseline,2,U178,Synthetic User 178,0,0,1,Not enough available hours
+P024,AccessibleWeb,Original AI,1,U178,Synthetic User 178,0,0,1,Not enough available hours
+P024,AccessibleWeb,Original AI,2,U150,Synthetic User 150,0,0,1,Not enough available hours
+P025,SalesInsight,Baseline,1,U035,Synthetic User 035,0,0,1,Not enough available hours
+P025,SalesInsight,Baseline,2,U116,Synthetic User 116,0,1,1,Experience below requirement; Not enough available hours
+P025,SalesInsight,Baseline,3,U158,Synthetic User 158,0,1,1,Experience below requirement; Not enough available hours
+P025,SalesInsight,Original AI,1,U035,Synthetic User 035,0,0,1,Not enough available hours
+P026,ChatAssist,Original AI,2,U007,Synthetic User 007,0,0,1,Not enough available hours
+P027,DevPipeline,Baseline,1,U038,Synthetic User 038,0,0,1,Not enough available hours
+P027,DevPipeline,Baseline,3,U075,Synthetic User 075,0,1,1,Experience below requirement; Not enough available hours
+P027,DevPipeline,Original AI,2,U038,Synthetic User 038,0,0,1,Not enough available hours
+P028,PortfolioHub,Baseline,1,U011,Synthetic User 011,0,1,1,Experience below requirement; Not enough available hours
+P028,PortfolioHub,Baseline,2,U063,Synthetic User 063,0,0,1,Not enough available hours
+P028,PortfolioHub,Baseline,3,U070,Synthetic User 070,0,1,0,Experience below requirement
+P028,PortfolioHub,Original AI,1,U063,Synthetic User 063,0,0,1,Not enough available hours
+P028,PortfolioHub,Original AI,2,U070,Synthetic User 070,0,1,0,Experience below requirement
+P029,QuickReserve,Baseline,3,U127,Synthetic User 127,0,0,1,Not enough available hours
+P029,QuickReserve,Original AI,3,U127,Synthetic User 127,0,0,1,Not enough available hours
+P030,CityExplorer,Baseline,3,U058,Synthetic User 058,0,0,1,Not enough available hours
+P030,CityExplorer,Original AI,2,U058,Synthetic User 058,0,0,1,Not enough available hours
